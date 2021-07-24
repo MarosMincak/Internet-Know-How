@@ -1,0 +1,72 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>Možnosť osloviť ľudí jedným rýchlym kliknutím tlačidla „odoslať“ môže byť úžasná vec. Táto ľahká
+                    komunikácia však prináša niekoľko problémov, ktoré môžu predstavovať isté problémy. Ľudia však,
+                    bohužiaľ, môžu používať ten istý nástroj (sociálne siete), ktorý nás všetkých spája a udržuje
+                    pohromade ako nástroj šikany. Aj keď šikana nie je novým fenoménom, s príchodom technológií sa
+                    dostávame k stále novým problémom spojené aj so šikanou.</p>
+            </div>
+
+            <div>
+                <p>
+                    <strong>Kyberšikana je typ šikany, ktorá sa odohráva najmä na sociálnych sieťach s cieľom zosmiešniť
+                        alebo ponížiť inú osobu.</strong> Kyberšikana môže obeti zanechať vážne psychické následky. Ku
+                    kyberšikane dochádza vtedy, keď útočník zaútočí na svoju obeť pomocou internetu - odosielaním
+                    textových správ, zdieľaním príspevkov na sociálnych sieťach, písaním komentárov atď., vďaka čomu sa
+                    snažia svoju obeť zosmiešnil, ohroziť alebo inak znehodnotiť. Kyberšikana si v posledných rokoch
+                    získala zvýšenú pozornosť, a práve preto sa to oficiálne stalo aj trestným činom, ktorý sa
+                    neobmedzuje iba na školu alebo na ihrisko.
+                </p>
+            </div>
+
+            <div>
+                <p>Na rozdiel od tradičného šikanovania, sa na kyberšikanu nevyžaduje fyzickú sila ani osobné
+                    stretnutie. Každý, kto má internetové pripojenie a digitálne zariadenie, ako je mobil, počítač alebo
+                    tablet, sa môže staň iniciátorom kyberšikany. Keďže veľa platforiem sa nesnaží overovať skutočnú
+                    totožnosť ľudí, môže si útočník zvoliť ľubovoľnú prezývku a zostať tak v anonymite. Kyberšikanu
+                    podporuje aj tento plášť anonymity, ktorý často slúži na zvýšenie nemravných limitov útočníka.
+                    Kyberšikana môže byť zameraná na kohokoľvek, vrátane malých detí, študentov stredných a vysokých
+                    škôl, ale aj dospelých ľudí.</p>
+            </div>
+
+            <div>
+                <p>Medzi najčastejšie príklady kyberšikany patria:</p>
+            </div>
+            <ul class="tipy">
+                <li>Zdieľanie alebo posielanie hanebných textov</li>
+                <li>Zverejňovanie trápnych fotografií alebo videí na sociálnych sieťach</li>
+                <li>Šírenie nepravdivých informácií</li>
+            </ul>
+
+            <div>
+                <p>Medzi najčastejšie motívy kyberšikany patria:</p>
+            </div>
+
+            <ul class="tipy">
+                <li>Fyzický vzhľad</li>
+                <li>Sexuálna orientácia</li>
+                <li>Rasa</li>
+                <li>Náboženstvo</li>
+            </ul>
+
+            <div style="text-align: center;">
+                <img style="width: 100%" src="{% static 'img/sikana-messenger.png' %}" alt="Šikana sociálna sieť">
+            </div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'four' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'four_one_one' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

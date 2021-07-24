@@ -1,0 +1,39 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>Spam je akýkoľvek druh nevyžiadanej digitálnej komunikácie, ktorá sa posiela hromadne. Spam sa často
+                    odosiela prostredníctvom e-mailu, ale môže sa šíriť aj prostredníctvom textových správ,
+                    telefonických hovorov alebo sociálnych médií. Väčšinou sa jedná o nezmyselné reklamy alebo šírenie
+                    nezmyselného textu prípadne poplašných správ.</p>
+            </div>
+
+            <div>
+                <p>Spam je nepríjemný, ale predstavuje aj hrozbu. Aj keď si mnohí z nás môžu myslieť, že sme natoľko
+                    dôvtipní, že dokážeme rozpoznať akúkoľvek ich formu, spameri pravidelne aktualizujú svoje metódy a
+                    správy, aby oklamali potenciálne obete. Realita je taká, že na nás neustále útočia kybernetickí
+                    zločinci dôkazom čoho môže byť aj vaša emailová schránka.</p>
+            </div>
+
+            <div>
+                <p>Spam nie je skratkou pre počítačovú hrozbu, aj keď niektoré tak boli navrhnuté (ako nezmyselný a
+                    nepríjemný malvér). Spam vo svojej podstate môže no nemusí byť nebezpečný. Môže obsahovať malvér
+                    ktorý pohltí vašu emailovú schránku a začne rozposielať správy z vášho účtu ostatným používateľom.
+                    <strong>Dôležitým pravidlom pri spamoch je neklikať na žiadne odkazy a nesťahovať prílohy!!!</strong> Tie môžu
+                    potenciálne stiahnuť malvér a tým poškodiť váš počítač.</p>
+            </div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_four' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four_one' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

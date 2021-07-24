@@ -1,0 +1,50 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+            <p>
+                Kvôli príchodom nových technológií v kombinácií s prístupom na internet sa naše súkromie a informácie o
+                nás stávajú zraniteľnejšie ako kedykoľvek predtým. Žijeme vo svete ktorý je vzájomne prepojený od
+                internetového bankovníctva až po vládnu infraštruktúru. Všetky tieto informácie sa nachádzajú na rôznych
+                úložiskách, ku ktorým sa zväčša dá dostať pomocou internetu. Súčasťou týchto údajov môžu byť aj číslo
+                občianskeho preukazu alebo iného dokladu totožnosti, trvalé bydlisko, duševné vlastníctvo a iné.
+                Neoprávnený prístup k týmto údajom môže nie jednej osobe skomplikovať život.
+            </p>
+            <p>
+                Ak by sme hľadali príklad z reálneho života, môžeme sa pozrieť na dnešné tzv. internet vecí (IoT –
+                Internet of Things). Jedná sa o ovládanie domácich spotrebičov cez domácu, alebo aj verejnú sieť. Táto
+                technológia sa už bežne používa na celom svete. Napríklad inteligentné zámky už pre nás dávno nie je nič
+                nové. Môžeme ich vidieť napríklad na moderných hotelových izbách. Pri vstupe do hotelovej izby použijeme
+                kartu alebo iný čip, ktorý priložením na zámok odomkne dvere. Ak sa nad tým zamyslíme, zistíme že zámok
+                má prístup k nejakej databáze z ktorej dokáže porovnať ID karty s tou priloženou. Ak sa v tejto databáze
+                karta nachádza, dvere sa otvoria. Z bezpečnosti, okrem kamier, si hotely túto databázu ukladajú a
+                taktiež majú prístup k údajom ako napríklad – kedy bola karta priložená, podľa ID karty si vie hotelový
+                systém jednoducho zistiť komu táto karta v tom čase pridelená, čas priloženia karty a tak ďalej. Tieto
+                informácie slúžia hotelom najmä kvôli krádežiam.
+            <p>
+                Ďalší z príkladov môžu byť novšie modely robotických vysávačov. Tieto novšie modely robotických
+                vysávačov vyžadujú pred ich použitím pripojenie na WiFi aby sme vedeli vysávač zapnúť kedykoľvek pomocou
+                internetu. Už nie je žiadnou novinkou že tieto vysávače si dokážu zmapovať celý byt a ukladať si tieto
+                údaje do svojej pamäte. Samozrejme tieto údaje slúžia na to, aby vysávač zbytočne nenarážal pri svojej
+                práci do nábytku a taktiež aby vedel vyhodnotiť, kde sa nachádzajú najväčšie plochy ktoré môžu byť
+                potenciálne najznečistenejšie. Vysávač si tak vie svojvoľne naplánovať trasu okolo celého bytu a vrátiť
+                sa na pôvodné miesto. Prečo sa potrebujú pripojenie na internet ? Samozrejme že ich vieme zapnúť a do
+                istej miery aj kontrolovať pomocou aplikácie v telefóne alebo inom zariadení keď akurát nie sme doma,
+                ale nikto nám nepovedal tú druhú verziu. Upozornilo na to už v minulosti niekoľko inštitúcií, médií a
+                dokonca aj samotný výrobcovia, že tým ako vysávače mapujú terén, tak zdieľajú tieto informácie so
+                spoločnosťami ako Google, Apple, Amazon. Tí pomocou týchto informácií vám následne vedia prispôsobiť
+                zobrazovanie reklám. Reklamy môžu byť rôzne: ak máte psa, zobrazia sa vám reklamy na psie pochutiny; ak
+                máte jednoduchý minimalistický byt, ponúkne vám nábytok...
+            </p>
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'two' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'two_two' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

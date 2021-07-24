@@ -1,0 +1,48 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>Ako je teda váš počítač napadnutý počítačovými vírusmi alebo škodlivým softvérom? Existuje veľa
+                    bežných prístupov, ako sa dokážu šíriť a dostať tak do zariadení bežných používateľov internetu.
+                    <strong>Jedna z najdôležitejších vecí je mať stále zapnutý antivírový program!</strong> Tento krátky
+                    list prezentuje
+                    činnosti, <strong>na ktoré by sme si mali dať pri používaní internetu dávať pozor</strong></p>
+            </div>
+
+            <ul class="tipy">
+                <li><strong>Sťahovanie infikovaných súborov</strong> ako prílohy <strong>e-mailov</strong> alebo z
+                    rôznych <strong>webových stránok.</strong></li>
+                <li><strong>Kliknutím na odkazy</strong>, ktoré sú presmerované na škodlivé webové stránky, ktoré sa
+                    môžu nachádzať v e-mailoch, aplikáciách na odosielanie správ alebo príspevkoch na sociálnych
+                    sieťach.
+                </li>
+                <li><strong>Sťahovanie súborov z nedôveryhodných stránok.</strong> Aj napriek tomu, že softvér je
+                    legitímny a plne
+                    funkčný, jeho sťahovanie z neoficiálnej stránky môže ukrývať aj nemilé prekvapenie. Tieto stránky
+                    navyše môžu v kóde HTML skrývať príkaz, ktorý pri načítavaní stránky začne súbory automaticky
+                    sťahovať.
+                </li>
+                <li><strong>Pripojenie zariadenia k infikovaným</strong> externým pevným <strong>diskom, USB</strong>
+                    alebo sieťovým diskom.
+                </li>
+            </ul>
+
+            <div style="text-align: center;">
+                <img style="width: 60%" src="{% static 'img/antivirusy.jpg' %}" alt="Antivirus">
+            </div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_two' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_four' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

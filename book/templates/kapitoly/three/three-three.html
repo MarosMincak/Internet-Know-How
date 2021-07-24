@@ -1,0 +1,48 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p><strong>Počítačový vírus je škodlivá časť počítačového kódu určená na šírenie zo zariadenia do
+                    zariadenia.</strong> Existujú rôzne typy počítačových vírusov, určené na iné účely ale <strong>s
+                    rovnakým cieľom – znehodnocovať údaje uložené v počítači alebo ich kradnúť.</strong></p>
+            </div>
+            <div>
+                <p>Pomysli na biologický vírus - ten, z ktorého ti je zle. Je to neustále nepríjemné, bráni vám v
+                    normálnom fungovaní a často sa vyžaduje niečo silné, aby ste sa toho zbavili. Počítačový vírus je
+                    veľmi podobný. Počítačové vírusy určené na neúnavnú replikáciu infikujú vaše programy a súbory,
+                    menia spôsob činnosti vášho počítača alebo bránia jeho úplnej funkcii.</p>
+            </div>
+            <div>
+                <p>Či už používate počítač so systémom Windows, Apple alebo Linux, stolný počítač, notebook, smartphone
+                    alebo tablet, ste zraniteľní voči neustále sa vyvíjajúcim kybernetickým hrozbám spôsobeným
+                    počítačovými vírusmi a iným typom škodlivého softvéru. Prvým krokom k ochrane seba a vašich údajov
+                    je pochopenie toho, proti čomu stojíte.</p>
+            </div>
+            <div>
+                <p>Pojem „malvér“ - spojenie škodlivého kódu a softvéru - sa v súčasnosti používa na označenie
+                    ľubovoľného škodlivého počítačového programu v počítači alebo mobilnom zariadení. Tieto programy sa
+                    inštalujú bez súhlasu používateľov a môžu spôsobiť množstvo nepríjemných účinkov, napríklad
+                    spomalenie výkonu počítača, vymazanie alebo šifrovanie údajov, poškodenie hardvéru alebo dokonca
+                    samotné ovládanie počítača. Hackeri neustále vyvíjajú čoraz sofistikovanejšie spôsoby infiltrácie do
+                    používateľských systémov. Je to ako hra na naháňačku, akonáhle sa jedna hrozba zneškodní, vyvinie sa
+                    náhrada a tento kolobeh pokračuje dookola. Pozrime sa na niektoré z najbežnejších typov škodlivého
+                    softvéru, ktoré sa v súčasnosti používajú.</p>
+            </div>
+            <div style="text-align: center;">
+                <img style="width: 60%" src="{% static 'img/system-failure.png' %}" alt="System failure">
+            </div>
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_two_one' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_one' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+            <div>
+                <p>S verejnými sieťami sa stretávame na dennom poriadku. Sú to prístupové body, ktoré sú väčšinou
+                    nezaheslované a má k nim ktokoľvek prístup. Nachádzajú sa v mestskej hromadnej doprave, obchodných
+                    domoch, kaviarňach, reštauráciách...
+                </p>
+            </div>
+
+            <div>
+                <p>Samotný bezdrôtový prístupový bod (WAP – wireless access point) nie je vo svojej podstate nebezpečný.
+                    Väčšina týchto prístupových bodov je tvorená neskúsenými osobami ktoré nedbajú na bezpečnosť a
+                    dôkladné šifrovanie údajov (dát) ktoré sa v sieti nachádzajú. Nebezpečným sa WAP stáva vtedy ak k
+                    tejto sieti má ktokoľvek prístup, nie je žiadnym spôsobom zaheslovaná a pozostáva zo slabého alebo
+                    žiadneho šifrovania.</p>
+            </div>
+
+            <div>
+                <p>Na týchto sieťach by sme sa spravidla nemali prihlasovať na stránky sociálnych sietí alebo na stránky
+                    ktoré pracujú s financiami (napr. bankový účet...). Je potrebné aby sme chránili nielen svoje
+                    súkromie, ale aj naše financie. Tieto verejné siete sa odporúča používať len na neutrálne akcie ako
+                    napr. prehľadávanie MHD spojov.</p>
+            </div>
+
+            <div>
+                <p><strong>Na týchto sieťach by sme sa spravidla nemali prihlasovať na stránky sociálnych sietí alebo na
+                    stránky
+                    ktoré pracujú s financiami (napr. bankový účet...).</strong> Je potrebné aby sme chránili nielen
+                    svoje
+                    súkromie, ale aj naše financie. Tieto verejné siete sa odporúča používať len na neutrálne akcie ako
+                    napr. prehľadávanie MHD spojov.</p>
+            </div>
+
+            <div>
+                <p>Hackeri na takto verejne dostupnej sieti dokážu odchytávať údaje ktoré používateľ prijíma/odosiela z
+                    jeho zariadenia.</p>
+            </div>
+
+            <h3>WAP a Hotspot</h3>
+
+            <div>
+                <p>Bezdrôtový prístupový bod (Wireless access point) je zariadenie ktoré bezdrôtovo prepája (napr.
+                    prostredníctvom Wi-Fi) iné zariadenia ako sú počítače, mobily, tablety atď... Toto prepojenie
+                    zariadení vytvára tzv. WLAN (Wireless local area network). Príklad WAP je Router ktorý bežne nájdeme
+                    v domácnosti, obchodoch, nákupných centrách...</p>
+            </div>
+
+            <div>
+                <p>Wi-fi hotspot je označenie pre zdieľanie internetu pomocou iného zariadenia. Najčastejšie sa týmto
+                    označením referuje na mobil, ktorý využíva dátový balíček od svojho operátora alebo len jednoducho
+                    premosťuje internetový signál z iného zdroja. <strong>Pripájanie sa na rôzne nezaheslované a
+                        nezašifrované
+                        hotspoty je rovnako riskantné ako akákoľvek iná verejná sieť.</strong> Vlastník takejto siete má
+                    jednoduchý
+                    prístup k informáciám, stránkam a heslám ktoré používateľ pri svojej činnosti využíva.</p>
+            </div>
+
+            <h3>VPN</h3>
+
+            <div>
+                <p>Virtual Private Network je softvér, ktorý vytvára komunikačný tunel medzi našim zariadením a serverom
+                    a stránkam ku ktorým sa zariadenie pripája. Vďaka tejto technológii sa skrýva nie len to čo robíme
+                    na internete, ale aj naša IP adresa.</p>
+            </div>
+
+            <div>
+                <p>Pre použitie VPN je potrebné používať špeciálny softvér od jednej zo spoločnosti ktorá VPN poskytuje.
+                    Tento softvér má prístup k VPN serverom rozmiestnených po celom svete a zabezpečuje tak unikátnu
+                    šifrovaciu komunikáciu medzi našim zariadením a VPN serverom. <strong>Takto šifrovaná komunikácia
+                        zabezpečuje to, že ani náš router alebo internetový poskytovateľ nevidí akcie ktoré na internete
+                        vykonávame.</strong></p>
+            </div>
+
+            <div style="text-align: center;">
+                <img style="width: 76%" src="{% static 'img/vpn.png' %}" alt="VPN">
+            </div>
+
+            <div>
+                <p>Jedno z praktického využitia takéhoto typu komunikácie je práve pri pripájaní sa k verejným sieťam
+                    keďže človek si nikdy nemôže byť istý, kto má k týmto sieťam prístup. Jednoduchým použitím VPN vieme
+                    zamedziť zneužitiu nášho súkromia pri prehliadaní internetu a prihlasovanie sa do rôznych účtov
+                    (napr. bankovníctvo).</p>
+            </div>
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one_two' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_two' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

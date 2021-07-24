@@ -1,0 +1,16 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+        <div class="container">
+            {% load static %}
+            <img class="book-cover" src="{% static 'img/obal.jpg' %}" alt="Obal knihy">
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'obsah' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>Sociálne siete ako sú Facebook, Instagram, Tik Tok a Youtube umožňujú ich používateľom medzi sebou
+                    komunikovať a zdieľať obsah. Obsah, ktorý zdieľame je väčšinou verejne dostupný kvôli predvoleným
+                    nastaveniam aplikácie. Zdieľané informácie sú tak vystavené potenciálnym kybernetickým útokom. Na
+                    to, aby sme takémuto potenciálnemu útoku zabránili je potrebné prispôsobiť preferované nastavenia
+                    aplikácie.</p>
+            </div>
+
+            <div>
+                <p>V prípade Facebooku, pri vytváraní statusu alebo pri nahrávaní fotky máme v hlavičke možnosť, kto
+                    môže daný príspevok vidieť.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img style="width: 70%" src="{% static 'img/fb.png' %}" alt="FaceBook">
+            </div>
+
+            <div>
+                <p>V online priestore by sme sa mali zaujímať o to, kto má prístup k našemu profilu, príspevkom,
+                    kamarátom, fotkám a videám. Sociálne média dnešnej doby nám jednoducho dovoľujú vypracovať si
+                    profil, ktorý môže širokej verejnosti poskytovať rôzne osobné údaje ako napr. telefónne číslo,
+                    emailová adresa, adresa bydliska, školu ktorú navštevujeme, rodinné a partnerské vzťahy a tak
+                    podobne. Ak má používateľ danej aplikácie tieto informácie vypísané, je potrebné sa uistiť komu
+                    tieto informácie budú zverejnené. Ako už bolo spomenuté v prípade Facebooku, tieto informácie sú
+                    prednastavené na verejné. Preto je potrebné si účet nastaviť tak, aby sme svoje údaje nechali
+                    verejné iba tým, ktorí sú nám blízky. Najideálnejšie riešenie je tieto informácie vôbec
+                    nezverejňovať ! Jedná sa o naše súkromie ktoré máme len jedno.</p>
+            </div>
+
+            <div>
+                <p>Na stránke Facebooku, v pravom hornom rohu, sa vieme dostať do nastavenia účtu a súkromia kde si
+                    vieme jednoducho kontrolovať a nastaviť, kto náš profil a naše príspevky vidieť môže, a kto naopak
+                    nie.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img style="width: 100%" src="{% static 'img/facebookSukromie_censored.jpg' %}" alt="FaceBook sukromie">
+            </div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one_three' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_two_one' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://cdn.datatables.net/v/bs5/dt-1.10.25/fh-3.1.9/r-2.2.9/rr-1.2.8/sb-1.1.0/sp-1.3.0/sl-1.3.3/datatables.min.js"></script>
+
+<!-- jQuery Custom Scroller CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+    $(document).ready(function () {
+        $('#myTable').DataTable({
+            "language": {
+                "decimal": "",
+                "emptyTable": "No data available in table",
+                "info": "Zobrazenie _START_ až _END_ z _TOTAL_ položiek",
+                "infoEmpty": "Zobrazenie 0 až 0 z 0 položiek",
+                "infoFiltered": "(filtrované z _MAX_ položiek)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Zobraziť _MENU_ položiek",
+                "loadingRecords": "Načítanie...",
+                "processing": "Spracovanie...",
+                "search": "Hľadať:",
+                "zeroRecords": "Nič sme nenašli",
+                "paginate": {
+                    "first": "Prvá",
+                    "last": "Posledná",
+                    "next": "Ďalej",
+                    "previous": "Späť"
+                },
+            },
+            "ordering": false,
+        });
+    });
+</script>

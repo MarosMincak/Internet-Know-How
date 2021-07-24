@@ -1,0 +1,77 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+            <p>
+                Určite sa vám už stalo že pri pri prehľadávaní webu a vytváraní nových účtov, prípadne prihlasovaní na
+                rôznych stránkach sa váš webový prehliadač spýtal pomocou vyskakovacieho okna otázku, či si chcete dané
+                údaje na tejto stránke uložiť. Po potvrdení tohto vyskakovacieho okna umožňujeme prehliadaču uložiť
+                všetky vložené informácie do databázy. Pri ďalšej návšteve tejto webovej stránky, prehľadávač porovná
+                databázu hesiel uloženú v počítači s IP adresou servera na ktorý ste pripojený a ak nájde zhodu,
+                automaticky sa vyplnia všetky textové polia. Táto databáza uložená priamo vo vašom prehliadači nie je
+                taká bezpečná, ako by ste si mohli myslieť. Samozrejme ak si takýmto spôsobom ukladáte hesla na
+                zariadení ktoré je pripojené iba na vašej domácej sieti, nič zlé by sa stať nemalo.
+            </p>
+
+            <p>
+                S bezpečnostných dôvodov sa odporúča túto možnosť uloženia ignorovať a heslo si do prehliadača
+                neukladať. Ďalší z dôvodov prečo tento spôsob neodporúča je fakt, že ak sa budete chcieť prihlásiť z
+                iného zariadenia do vášho účtu môže sa ľahko stať, že heslo si pamätať nebudete keďže naposledy čo ste
+                ho použili bolo pri jeho vytvorení. Ak heslo používate často (alebo pravidelne), je menšia
+                pravdepodobnosť že ho stratíte prípadne zabudnete.
+            </p>
+
+            <div style="text-align: center;">
+                <img style="width: 65%" src="{% static 'img/ukl_hesla.png' %}" alt="Ukladanie hesla">
+            </div>
+            <h3>Cookies</h3>
+
+            <div>
+                <p>Možno ste už niekedy v online svete počuli o termíne cookies (Samozrejme hovoríme o elektronických
+                    druhoch cookies, nie o tých čokoládových). Áno, jedná sa o tú otravnú tabuľku ktorá nás pri
+                    niektorých webových stránkach ani nepustí k jej obsahu bez potvrdenia týchto elektronických
+                    sušienkach.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img style="width: 65%" src="{% static 'img/cookies.png' %}" alt="Cookies">
+            </div>
+
+            <div>
+                <p>
+                    Súbory cookie sa v zásade používajú na „zapamätanie si“ vášho hesla, ale nie v rovnakom zmysle ako
+                    heslá uložené v počítači. Webové stránky, ktoré navštívite, používajú súbory cookie, ktoré sa do
+                    vášho počítača ukladajú až po prihlásení. Cookies sú textové súbory s malými údajmi (ako napr
+                    používateľské meno, heslo, obsah nákupného online košíka...), ktoré sa používajú na identifikáciu
+                    vášho počítača s webovým serverom ktorý používate. Jedným z účelov súborov cookie je zabrániť tomu,
+                    aby ste sa po prihlásení museli opakovane prihlasovať na každú novú stránku, ktorú navštívite. Vaše
+                    samotné prihlasovacie údaje nie sú uložené v súbore cookie. Namiesto toho web, ktorý ste prihlásili,
+                    vloží do vášho počítača kód, ktorý si pamätá kto ste, a potvrdzuje, že ste sa už prihlásili. Tento
+                    kód je jedinečný pre web a váš počítač. Ďalší z dôvodov používania Cookie je nastavenie grafického
+                    používateľského webového rozhrania (Graphical user’s interface – GUI) tak, ako si ju sám používateľ
+                    nastavil (zmena textu, pozadia a upravenie iných preferencií, ktoré stránka ponúka).
+                </p>
+            </div>
+
+            <div>
+                <p>Súbory cookie sú často časovo obmedzené. Preto ste po určitom období odhlásení z webovej stránky
+                    automaticky odstránia. Ak sa tak nestane, môžete nastaviť prehliadač tak, aby ich po vypnutí
+                    prehliadača sám odstránil.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img style="width: 100%" src="{% static 'img/twitch.png' %}" alt="Twitch">
+            </div>
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one_one' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one_three' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

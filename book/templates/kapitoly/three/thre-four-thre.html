@@ -1,0 +1,142 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>Sociálne inžinierstvo je umenie manipulovať s ľuďmi tak, aby sa vzdali dôverných informácií. Typy
+                    informácií, ktoré títo zločinci vyhľadávajú sa môžu líšiť, ale keď sa na jednotlivcov zameriavajú,
+                    zvyčajne sa vás pokúšajú oklamať takým spôsobom, aby ste získali ich dôveru a poskytli im svoje
+                    heslá alebo bankové informácie.</p>
+            </div>
+
+            <div>
+                <p>Počítačový zločinci používajú taktiku sociálneho inžinierstva, pretože je zvyčajne jednoduchšie
+                    využiť vašu prirodzenú náklonnosť k dôvere, než je nájsť spôsoby, ako hacknúť váš softvér. Napríklad
+                    je oveľa jednoduchšie niekoho oklamať, aby vám dal svoje heslo, ako je to v prípade, keď sa snažíte
+                    heslo hacknúť (pokiaľ heslo nie je skutočne slabé).</p>
+            </div>
+
+            <div>
+                <p>ociálne inžinierstvo nie je nič nové. Podvodníci používajú sociálne inžinierstvo od nepamäti, aby
+                    prinútili svoje obete konať proti lepšiemu úsudku a hlavne v ich prospech, čo často viedlo k
+                    odcudzeniu peňazí alebo prezradeniu súkromných a citlivých informácií. Vďaka internetu však majú
+                    podvodníci prístup do úplne nového sveta potenciálnych cieľov.</p>
+            </div>
+
+            <div>
+                <p>Sociálne inžinierstvo má svoj pôvod koncom 18. storočia kde sa našli aj listy z Jeruzalema. Po
+                    francúzskej revolúcii boli francúzske väznice naplnené pracovitými podvodníkmi, ktorí sa vydávali za
+                    komorníka francúzskeho šľachtica. Následne títo podvodníci rozosielal rôzne listy v ktorých písali o
+                    poklade, ktorý stihli zakopať. Ponúkali presnú mapu k pokladu za skromnú finančnú hotovosť. Na tieto
+                    listy <a style="color: revert;" target="_blank"
+                             href="https://books.google.sk/books?id=QEARBQAAQBAJ&newbks=1&newbks_redir=0&lpg=PT224&dq=spanish+prisoners+scam&pg=PT136&redir_esc=y#v=onepage&q&f=false">odpovedalo
+                        20 percent príjemcov.</a> Neskôr sa tento podvod preslávil pod názvom „Spanish Prisoner
+                    scam“.</p>
+            </div>
+
+            <h3>Priebeh sociálneho inžinierstva</h3>
+
+            <div>
+                <p>Ak sa podvodníkovi nejakým spôsobom podarí získať alebo spoločensky pripraviť e-mailové heslo jednej
+                    osoby, má prístup k zoznamu kontaktov tejto osoby - a pretože väčšina ľudí používa jedno heslo
+                    všade, má pravdepodobne tiež prístup ku kontaktom na sociálnych sieťach. Keď má podvodník pod
+                    kontrolou tento e-mailový účet, rozposiela e-maily všetkým kontaktom osoby alebo zanecháva správy
+                    rôzneho charakteru na všetkých sociálnych sieťach ku ktorým má prístup. Keďže takúto správu dostanú
+                    od kamaráta alebo známeho, bude považovaná za dôveryhodnú a je vysoká pravdepodobnosť že sa na daný
+                    podvod nechajú nachytať a môžu skončiť podobne. Správy ktoré títo podvodníci rozposielajú môžu
+                    obsahovať URL linky s počítačovými vírusmi alebo dokonca aj istú formu ďalšieho sociálneho
+                    inžinierstva zameranú na odcudzenie osobných a citlivých údajov.</p>
+            </div>
+
+            <div>
+                <p>S jednoduchým využitím vašej dôvery a zvedavosti, tieto správy:</p>
+            </div>
+
+            <ul class="tipy">
+                <li>obsahujú odkaz, ktorý môže obsahovať malvér a infikovať tak váš počítač,</li>
+                <li>obsahujú prílohy na stiahnutie obrázkov, hudby, filmu, dokumentu atď., Ktoré majú zabudovaný
+                    škodlivý softvér. Ak stiahnete súbor, čo pravdepodobne urobíte, pretože si myslíte, že je to od
+                    vášho priateľa, môže to infikovať váš počítač. Podvodník má teraz prístup k vášmu zariadeniu,
+                    e-mailovému účtu, účtom na sociálnych sieťach... Takýmto spôsobom sa môže útok šíriť ďalej a ďalej.
+                </li>
+            </ul>
+            <br>
+
+            <h3>E-mail alebo telefonát z iného „dôveryhodného“ zdroja</h3>
+
+            <div>
+                <p>Phishingové útoky sú podmnožinou stratégie sociálneho inžinierstva, ktorá napodobňuje dôveryhodný
+                    zdroj a vytvára zdanlivo logický scenár odovzdávania finančných prostriedkov alebo citlivých
+                    osobných údajov.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img style="width: 75%" src="{% static 'img/slsp_phishing.png' %}" alt="SLSP Phishing">
+            </div>
+
+            <ul class="tipy">
+                <li><strong>Naliehavo žiadať o pomoc.</strong> Váš „priateľ“ uviazol v cudzej krajine, bol okradnutý,
+                    zbitý a je v nemocnici. Potrebujú, aby ste poslali peniaze na bezpečný návrat domov. Potom pošlú
+                    adresu, kde a ako je potrebné odovzdať peniaze.
+                </li>
+                <li><strong>Phishingové pokusy s legitímnym zdanlivým pozadím.</strong> Podvodník zvyčajne odosiela
+                    e-mail, komentáre alebo textové správy, ktoré zjavne pochádzajú od legitímnej osoby, populárnej
+                    spoločnosti, banky, školy alebo inštitúcie.
+                </li>
+                <li><strong>Zbierka alebo pomoc pri katastrofe.</strong> Pocit štedrosti alebo láskavosti je to, čo
+                    niekedy ľuďom úplne stačí. Podvodníci sa tohto pocitu môžu zmocniť a zbierku na invalidný vozík
+                    alebo môžu prísť s príbehom, ako prišli o strechu nad hlavou kvôli záplavám.
+                </li>
+                <li><strong>„Overenie“ vašich údajov kliknutím na zobrazený odkaz.</strong> Umiestnenie odkazu môže
+                    vyzerať veľmi legitímne so všetkými správnymi logami (napr. banky) a obsahom najmä, keď podvodníci
+                    mohli v skutočnosti skopírovať presný formát a obsah legitímnej stránky. Pretože všetko vyzerá
+                    legitímne, dôverujete e-mailu a falošným stránkam a poskytujete všetky informácie, ktoré podvodník
+                    žiada. Medzi tieto typy phishingových podvodov často patrí varovanie, čo sa stane, ak nebudete
+                    čoskoro konať, pretože podvodníci vedia, že ak vás prinútia konať čo najskôr, tak to urobíte.
+                </li>
+                <li><strong>Upozorní vás, že ste „víťazom.“</strong> Táto správa tvrdí, že pochádza z lotérie alebo inej
+                    súťaže v ktorej ste boli vylosovaný a vyhrávate čiastku ktorú si môžete prevziať kliknutím na určitý
+                    link, alebo postupovaním nejakých krokov. Môžu dokonca od vás vyžadovať informácie o vašej bank,
+                    uviesť svoju adresu a telefónne číslo, aby mohli výhru poslať.
+                </li>
+                <li><strong>Správa od šéfa alebo spolupracovník.</strong> Podvodníci sa môžu vydávať za vášho kolegu z
+                    práce a požiadať o aktualizáciu a zaslanie na jeho adresu dôležitého dokumentu alebo projektu, na
+                    ktorom vaša spoločnosť momentálne pracuje. Môžu to byť taktiež informácie týkajúce sa kreditnej
+                    karty spoločnosti alebo iný dotaz, ktorý sa dokonale maskuje za každodennú záležitosť.
+                </li>
+            </ul>
+
+            <h3>Ochrana voči sociálnemu inžinierstvu:</h3>
+
+            <ul class="tipy">
+                <li><strong>Vymažte všetky žiadosti o finančné informácie alebo heslá.</strong> Ak vás niekto požiadal o
+                    to, aby ste mu poskytli prístup k vašemu účtu alebo k iným osobnými údajmi, je to na 90% podvod.
+                </li>
+                <li><strong>Zamietnite žiadosti o pomoc.</strong> Legitímne spoločnosti a organizácie vás <strong><u>nikdy
+                    nekontaktujú</u></strong> s tým že potrebujú prístupové údaje k vášmu účtu. Podobne, ak dostanete
+                    žiadosť o pomoc od charitatívnej organizácie alebo organizácie, s ktorou nemáte žiadny vzťah,
+                    vymažte ju. Ak chcete na nejakú charitu prispieť, vyhľadajte si sami renomované charitatívne
+                    organizácie, aby ste sa vyhli podvodu.
+                </li>
+                <li><strong>Využívanie „Spam“ filtru.</strong> Každý e-mailový klient má filtre proti spamu. Väčšina
+                    filtrov funguje automaticky na základe umelej inteligencie, ktorá vyhodnocuje či je daný odosielať
+                    legitímny, alebo nie. Nahlasovaním správ prispievate k trénovaniu umelej inteligencie ale treba dbať
+                    aj na to, že je dobré si občas sekciu spam otvoriť, lebo môže sa stať že tam nájdete uviaznutý
+                    nejaký legitímny e-mail ktorý mohol byť umelou inteligenciou vyhodnotený negatívne.
+                </li>
+            </ul>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four_two' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'four' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

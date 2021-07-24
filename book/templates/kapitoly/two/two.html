@@ -1,0 +1,41 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+            <p>
+                Prečo by sme sa vôbec mali obávať niečoho, čo bolo vytvorené pre dobrú vec ? Ľudstvo sa odjakživa
+                neustále vyvíja v rôznych sférach. Všetky prichádzajúce technologické posuny, novinky a vychytávky boli
+                vždy považované za niečo užitočné, a teda niečo čo dokáže uľahčovať ľudstvu život. V dnešnej dobe by sme
+                si ani nevedeli predstaviť život bez bežných vecí ako sú rôzne dopravné prostriedky, práčky, kosačky a
+                mnoho ďalších vecí. Všetko na čo si vieme v rýchlosti spomenúť malo svojho predchodcu, napríklad
+                namiesto kosačky sme mali kosu, namiesto ventilátorov sme používali vejár... Mnoho z týchto predchodcov
+                digitálnej doby sa používa aj dodnes. Podstatou je to, že akýkoľvek technologický posun sa snaží nejakým
+                spôsobom spríjemniť, spohodlnit a zjednodušiť naše bytie na tejto planéte. Otázka ale znie, dostaneme
+                vôbec niekedy do bodu, kedy nebudeme vedieť čo ďalej ? Narazíme na túto hranicu, ktorú žiaľ nebudeme
+                môcť preskočiť a ľudstvo sa prestane vyvíjať ?
+            </p>
+            <p>
+                Žijeme v dobe ktorej neodlúčiteľnou súčasťou sú digitálne technológie. Táto digitálna éra nám priniesla
+                mnoho dobrých vecí ale aj ako to býva zvykom, mnoho zlých. Ak sa na to pozrieme z iného hľadiska, tak si
+                uvedomíme že všetko čo sme vytvorili pre dobrú vec sa dokázalo obrátiť aj proti nám. Napríklad jedným z
+                najväčších objavov ľudstva bola elektrická energia. Jej prvotné využitie a nápady súvisiace s ňou boli
+                geniálne. Predstavovalo to pre nás vstupnú bránu do sveta technológii, ktorá nám od jej prvotného
+                začiatku až doteraz ponúkla nespočet skvelých zariadení. Ľudstvo sa tejto energie zmocnilo samozrejme aj
+                v zlom svetle a vzniklo tak napríklad elektrické kreslo ktoré ako vieme, neprinieslo nič dobré a
+                nakoniec bolo aj zakázané. Takýchto rôznych príkladov môžeme nájsť tisíce. Rovnako to môžeme nájsť aj v
+                preprave. Lode, lietadlá, motorové vozidlá spočiatku slúžili na zjednodušenú prepravu osôb alebo tovaru
+                medzi krajinami. Samozrejme vzápätí na to nám vznikli rôzne bojové stroje ako sú tanky, bombardéry a
+                bojové lode...
+            </p>
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'one' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'two_one' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

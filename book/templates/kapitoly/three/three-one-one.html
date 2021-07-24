@@ -1,0 +1,194 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    {% load static %}
+
+    <div id="content">
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div class="text-center">
+
+                <form action="{% url 'three_one_one' %}">
+                    <div class="row">
+                        <div class="col-sm">
+                            <select class="form-select" name="length" id="length">
+                                <option value="6">6 znakov</option>
+                                <option value="7">7 znakov</option>
+                                <option value="8">8 znakov</option>
+                                <option value="9">9 znakov</option>
+                                <option value="10" selected="selected">10 znakov</option>
+                                <option value="11">11 znakov</option>
+                                <option value="12">12 znakov</option>
+                                <option value="13">13 znakov</option>
+                                <option value="14">14 znakov</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm">
+                            <input class="form-check-input" type="checkbox" name="uppercase" checked> Veľké znaky
+                        </div>
+                        <div class="col-sm">
+                            <input class="form-check-input" type="checkbox" name="numbers" checked> Čísla
+                        </div>
+                        <div class="col-sm">
+                            <input class="form-check-input" type="checkbox" name="specialcharacters"> Špeciálne znaky
+                        </div>
+                    </div>
+
+                    <input id="refresh" type="submit" value="Generovať heslo" class="btn btn-primary">
+                </form>
+            </div>
+            <div class="container text-center">
+                <h2>Tvoje heslo je: </h2>
+                <h2 class="alert alert-success">{{ password }}</h2>
+            </div>
+
+            <p>
+                Heslo je najzákladnejšou a najdôležitejšou súčasťou počítačovej bezpečnosti. Takmer všetko čo používame
+                online alebo offline vyžaduje istú formu overenia totožnosti. Cieľom tejto požiadavky je odpoveď na
+                otázku: „Je osoba, ktorá práve sedí za klávesnicou rovnaká osoba, ktorá by mala mať prístup k tomuto
+                obsahu?“. Aj napriek tomu že heslo je neoddeliteľnou súčasťou počítačovej bezpečnosti, jedná sa o jednu
+                z najslabších foriem overovania totožnosti najmä preto že ju využíva veľká väčšina populácie. Existujú
+                rôzne databázy uchovávajúce najčastejšie používané heslá s cieľom poukázať na častú opakovanosť hesiel u
+                mnohých používateľov. V rámci boja proti tomuto fenoménu začali webové stránky (najmä tie, ktoré sú úzko
+                späté s financiami) používať rôzne kritéria, ktoré musí vytvorené heslo spĺňať. Pribúdaním
+                komplexnejších kritérií sa samotné heslo síce stáva bezpečnejším, ale taktiež aj ťažko zapamätateľným
+                pre použivateľa čo často vedie k jeho strate a následnej obnove.
+            </p>
+            <p>
+                Práve už pre spomenuté často opakované heslá je potrebné dbať na svoju bezpečnosť a vytvoriť si heslo,
+                ktoré bude ťažko uhádnuteľné.
+            </p>
+            <p><strong>Silné heslo musí spĺňať nasledovnú kombináciu:</strong></p>
+            <strong>
+                <ul style="list-style-type: revert;">
+                    <li>- Veľké písmená</li>
+                    <li>- Malé písmená</li>
+                    <li>- Čísla</li>
+                    <li>- Znaky (ak to daná aplikácia povoľuje)</li>
+                </ul>
+            </strong>
+            <p>
+                Tento princíp návrhu hesla zvyšuje jeho bezpečnosť keďže počet možných znakov ako aj ich kombinácia sa
+                drasticky zvýšila.
+            </p>
+            <p>
+                Tvorba hesla môže byť pre veľa ľudí jedna z najťažších vecí. Rozdiel medzi človekom a počítačom je taký
+                že stroj rozmýšľa bezpečnejšie, zatiaľčo človek pohodlnejšie. Existuje veľa náhodných generátorov hesiel
+                ktoré pomáhajú ľuďom prísť s heslom ktoré je niečím unikátne a teda aj ťažko uhádnuteľné. Ľudia zase
+                naopak dbajú na to aby si dané heslo ľahko zapamätali a nedochádzalo by tak k jeho strate prípade
+                obnove. Ľudia si často zadávajú ako heslo niečo, čo je im blízke. Buď je to meno blízkej osoby, dátum,
+                telefónne číslo atď.. Všetky tieto príklady sú <strong>SLABÉ HESLÁ. </strong>
+            </p>
+            <p>
+                Spôsobov na jednoduchú a bezpečnú tvorbu hesiel poznáme niekoľko a v nasledujúcom príklade si ukážeme
+                jeden z nich. Ľudia sú odjakživa učený pamäti. Či už sa jedná o recitovanie básničiek, napísanie a
+                použitie rôznych vzorcov a podobne. Jeden zo spôsobov ako si vytvoriť bezpečné heslo je nejaký krátky
+                príbeh, spomienku, prípadne krátky úryvok z knihy. Napríklad môžeme použiť nasledovnú časť príbehu:
+                „Najlepšia dovolenka bola s Martinom v Istanbule.“. Nasledovnú vetu môžeme malými úpravami premeniť na
+                dokonalé heslo. Jednu z úprav ktorú môžeme použiť je zamenenie písmen za čísla napr.:
+            </p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+
+                    <table class="table text-center table-responsive">
+                        <thead>
+                        <tr>
+                            <th scope="col">Znak</th>
+                            <th scope="col">Písmeno</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>l alebo L (malé L)</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Z</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>E</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>S</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>b</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>T</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>@</td>
+                            <td>a</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Ak sa pozrieme na tabuľku vedľa, vidíme určité podobnosti týchto znakov s písmenami. Podobností
+                        vieme
+                        nájsť oveľa viac aj v iných znakoch, stačí ich len poznať a mať trošku predstavivosti. Teraz keď
+                        nahradíme všetky tieto znaky z tabuľky do našej pôvodnej vety, získame niečo takéto:
+                    </p>
+                </div>
+            </div>
+
+
+            <div>
+                <p class="text-center"><strong>NajlepšiaDovolenkaBolaSMartinomVIstanbule</strong></p>
+            </div>
+            <div>
+                <p class="text-center">&darr;</p>
+            </div>
+            <div>
+                <p class="text-center"><strong>N4jl3p514D0v013nk4801a5M4rt1n0mV15t4n6u13</strong></p>
+            </div>
+            <div>
+                <p>Ďalším s pomerne jednoduchým spôsobom vytvorenia hesla je tzv. „Kresba na klávesnici“. Jedná sa o
+                    princíp, v ktorom vytvoríme pomyselný obrázok na klávesnici ktorý vyjadríme v znakoch napr. dve
+                    pomyselné vrany:</p>
+            </div>
+            <div style="text-align: center;">
+                <img style="width: 75%;" src="{% static 'img/klavesnica1.png' %}" alt="Kresba na klávesnici">
+            </div>
+            <div>
+                <p class="text-center">Takúto pomyselnú kresbu môžeme vnímať sprava, doľava:
+                    <strong>w34rt67uxdfvbhjm</strong></p>
+            </div>
+            <div>
+                <p class="text-center">Podobným spôsobom vieme vytvoriť napríklad špirálu ->
+                    <strong>ghytfvbbnju765rdc</strong>:</p>
+            </div>
+            <div style="text-align: center;">
+                <img style="width: 75%;" src="{% static 'img/klavesnica2.png' %}" alt="Kresba na klávesnici">
+            </div>
+
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one' %}"
+                   role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one_two' %}"
+                   role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

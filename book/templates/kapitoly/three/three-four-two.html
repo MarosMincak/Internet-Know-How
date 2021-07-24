@@ -1,0 +1,103 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>Aby ste zabránili phishingovým útokom, mali by ste dodržiavať všeobecné osvedčené postupy podobné
+                    tým, ktoré by ste mohli podniknúť na zabránenie vírusom a ďalšiemu škodlivému softvéru.</p>
+            </div>
+
+            <div>
+                <p>Najskôr sa uistite, že sú vaše antivírusové systémy aktualizované, aby ste sa chránili pred známymi
+                    chybami zabezpečenia. Okrem antivírového programu sa uistite, že máte zapnutý firewall – tieto
+                    programy kombinovane chránia okrem iného aj prehľadávanie na internete ako aj samotný prehliadač.
+                    Kľúč k ochrane pred phishingom spočíva v schopnosti rozpoznať kybernetický útok ako nelegitímny.</p>
+            </div>
+
+            <div>
+                <p>Pri obdržaní akejkoľvek správy alebo mailu je potrebné skontrolovať hneď niekoľko vecí. Štruktúra,
+                    ktorou je mail písaný (gramatické chyby, zlá štylizácia textu, lámavá slovenčina atp.) môže
+                    napovedať pri odhalení podvodnej správy.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img style="width: 100%" src="{% static 'img/clickbait_truni.png' %}" alt="Clickbait">
+            </div>
+
+            <div>
+                <p>Na obrázku vyššie môžeme vidieť príklad toho, ako takáto správa môže vyzerať. Už len samotný názov
+                    mailu „bdelý“ napovedá o neprofesionalite, ktorou sa útočník snažil využiť jednu z metód
+                    phishingu.</p>
+            </div>
+
+            <div>
+                <p>
+                    Ak sa pozrieme na odosielateľa tejto správy, môžeme si všimnúť že správa ja písaná síce po slovensky
+                    ale emailová adresa pochádza z Brazílie.
+                </p>
+            </div>
+
+            <div>
+                <p>
+                    Pri preskúmaní hypertextového odkazu tiež môžeme vidieť, po kliknutí na odkaz by nás to presmerovalo
+                    na zvláštnu adresu, ktorá pozostáva z rôznych čísel, nezmyselných slov a hlavne na Brazilskú doménu,
+                    aj napriek tomu že sa jedná o slovenského emailového poskytovateľa.
+                </p>
+            </div>
+
+            <div>
+                <p>V skratke povedané, <strong>pri prijatí akejkoľvek správy alebo emailu je potrebné skontrolovať
+                    nasledovné
+                    veci v tomto poradí:</strong></p>
+            </div>
+
+            <ol>
+                <li>Odosielateľ správy</li>
+                <li>Štylizácia textu</li>
+                <li>Preskúmanie odkazov v texte <strong>(NEKLIKAŤ !!!)</strong></li>
+            </ol>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        Ak jeden z týchto bodov vyzerá byť nedôveryhodne, správu je potrebné ihneď vymazať, prípadne
+                        nahlásiť ju pomocou poštového klienta ako „spam“ alebo „phishing“. Túto funkciu môžeme nájsť v
+                        možnostiach pri prijatej správe. Gmail ponúka obe tieto možnosti, čím dokážete pomôcť aj
+                        samotnému
+                        googlu rozpoznať typ podobných správ a následne pomocou umelej inteligencie sa podobné správy
+                        budú
+                        filtrovať. V podobnom prípade len stačí, ak takýmto správam sa bude vyhýbať a ignorovať ich.
+                    </p>
+                    <p>Ak jeden z týchto bodov vyzerá byť nedôveryhodne, správu je potrebné ihneď
+                        vymazať, prípadne nahlásiť ju pomocou poštového klienta ako „spam“ alebo „phishing“. Túto
+                        funkciu
+                        môžeme nájsť v možnostiach pri prijatej správe. Gmail ponúka obe tieto možnosti, čím dokážete
+                        pomôcť
+                        aj samotnému googlu rozpoznať typ podobných správ a následne pomocou umelej inteligencie sa
+                        podobné
+                        správy budú filtrovať. V podobnom prípade len stačí, ak takýmto správam sa bude vyhýbať a
+                        ignorovať
+                        ich.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <div style="text-align: center;">
+                        <img style="width: 70%" src="{% static 'img/spamPhishing.png' %}" alt="Spam Phishing">
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four_one' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four_three' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

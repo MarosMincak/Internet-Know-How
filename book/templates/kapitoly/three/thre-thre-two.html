@@ -1,0 +1,42 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>Jednou z najbežnejších mylných predstáv o škodlivom softvéri je domnienka, že infekcia zariadenia je
+                    zrejmá. Používatelia často predpokladajú, že budú vedieť, či bol ich počítač napadnutý. Typickým
+                    zámerom škodlivého softvéru je však vykonávať svoje úlohy čo najdlhšie. Malvér teda nezanecháva
+                    stopy, ktoré treba sledovať, a váš systém nevykazuje žiadne príznaky infekcie. Dokonca aj malware
+                    ako ransomware dáva o svojej prítomnosti vedieť až po zašifrovaní súborov, čím splní svoju prvú
+                    úlohu a bude spätne vykúpený používateľovi.</p>
+            </div>
+
+            <div>
+                <p>Ďalšou častou mylnou predstavou je, že všetky renomované webové stránky sú bezpečné. Napadnutie
+                    legitímnych webových stránok infikovaným kódom je jedným z najjednoduchších spôsobov, ako presvedčiť
+                    potenciálne obete, aby si stiahli súbory alebo poskytli citlivé informácie. Presne to sa stalo
+                    <a style="color: revert;" href="https://www.bloomberg.com/news/articles/2019-08-15/ecb-says-one-of-its-websites-was-hacked-data-possibly-captured">Európskej
+                        centrálnej banke (ECB)</a> v auguste 2019.</p>
+            </div>
+
+            <div>
+                <p>Mnoho používateľov verí, že ich osobné údaje - fotografie, dokumenty a súbory - nemajú pre tvorcov
+                    škodlivého softvéru žiadnu hodnotu. Kybernetickí zločinci však ťažia verejne dostupné údaje,
+                    napríklad údaje na sociálnych sieťach, na vytváranie vlastných cielených útokov na jednotlivcov
+                    alebo na zhromažďovanie spravodajských informácií o podvodných phishingových e-mailoch populárnych
+                    pre prístup do sietí a aktív veľkých, inak bezpečných organizácií.</p>
+            </div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_one' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_three' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

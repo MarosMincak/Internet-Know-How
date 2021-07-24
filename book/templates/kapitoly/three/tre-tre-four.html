@@ -1,0 +1,71 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>Aj keď väčšina škodlivého softvéru nezanecháva žiadne zreteľné znaky a váš počítač funguje normálne,
+                    niekedy môžu existovať náznaky, ktoré môžu napovedať že vaše zariadenie bolo infikované. Na čele
+                    rebríčka je <strong>znížený výkon</strong>. Patria sem pomalé procesy, okná, ktoré sa načítajú
+                    dlhšie ako zvyčajne, a
+                    zdanlivo náhodné programy bežiace na pozadí. Môžete si tiež všimnúť, že vo vašom prehliadači boli
+                    zmenené domovské stránky internetu alebo že sa kontextové reklamy vyskytujú častejšie ako zvyčajne.
+                    V niektorých prípadoch môže malvér ovplyvniť aj základné funkcie počítača: Systém Windows sa nemusí
+                    vôbec spustiť, alebo nebudete sa môcť pripojiť na internet atp.</p>
+            </div>
+
+            <div>
+                <p>Najčastejšie príznaky počítačových vírusov sú:</p>
+            </div>
+
+            <ul class="tipy">
+                <li><strong>Strata výkonu. </strong>Malvér môže spôsobiť, že váš počítač bude procesy spracovávať
+                    pomalšie. To znamená, že môže trvať stále dlhšie, kým dokončíte prácu, počitáč sa bude zasekávať a
+                    pôjde pomalšie ako väčšinou.
+                </li>
+                <li><strong>Strata funkčnosti. </strong>V extrémnych prípadoch môže vírus zhoršiť výkon alebo znemožní
+                    funkčnosť vášho počítača natoľko, že už nebudete môcť svoj počítač používať.
+                </li>
+                <li><strong>Vystavenie inému negatívnemu softvéru. </strong>Účelom niektorých škodlivých programov je
+                    nalákať vás na stiahnutie ešte nebezpečnejšieho softvéru.
+                </li>
+                <li><strong>Strata informácií. </strong>Vírusy môžu vymazať uložené súbory alebo údaje.</li>
+                <li><strong>Porušenie súkromia a strata účtov. </strong>V niektorých prípadoch sa vírusy snažia
+                    zhromaždiť vaše osobné údaje na účely krádeže identity alebo podvodu. Ak dôjde k porušeniu vašich
+                    účtov, môže to viesť k finančným stratám. Občas sa stáva, že vám emailom príde upozornenie že sa na
+                    váš účet pripojil niekto z inej IP adresy, ako doteraz.
+                </li>
+            </ul>
+
+            <div class="row">
+                <div class="col-lg-4"><p>Ak máte podozrenie, že váš počítač môže byť infikovaný, okamžite prehľadajte
+                    systém antivírusom. Ak
+                    sa nič nenájde, ale stále máte pochybnosti, skúste sa pomocou správcu úloh (CTRL + ALT + DEL)
+                    pozrieť na všetky programy, ktoré sú spustené na pozadí.</p>
+
+                    <p>Predtým ako ukončíte akýkoľvek proces, odporúčam si daný proces vyhľadať prostredníctvom google.
+                        Ukončením nejakého dôležitého procesu na pozadí môžete nedopatrením vypnúť napríklad
+                        zobrazovanie
+                        plochy, ovládač grafickej karty atp.</p>
+                </div>
+                <div class="col-lg-8">
+                    <div style="text-align: center;">
+                        <img style="width: 70%" src="{% static 'img/taskmanager.png' %}" alt="Task manager">
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_three' %}"
+                   role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

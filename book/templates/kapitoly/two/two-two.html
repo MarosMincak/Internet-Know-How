@@ -1,0 +1,33 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+            <p>
+                Kybernetický útok je v súčasnosti medzinárodným záujmom a vzbudil veľa obáv z toho, že hackerstvo a iné
+                bezpečnostné útoky by mohli ohroziť svetovú ekonomiku. Rôzne organizácie prenášajú citlivé údaje naprieč
+                sieťami do ďalších zariadení, vďaka čomu sa tieto údaje stávajú jednoduchým cieľom pre útočníkov. Podľa
+                popisu v oblasti kybernetickej bezpečnosti sú tieto informácie chránené, rovnako ako aj systémy
+                používané na ich spracovanie alebo ukladanie, čím sa zvyšuje úroveň bezpečnosti ale nedokáže zaistiť
+                100% ochranu.
+            </p>
+            <p>
+                Najväčším cieľom pre útočníkov predstavujú veľké firmy a inštitúcie, sociálne siete slávnych osobností,
+                známe aplikácie s obrovskou databázov (napr. Facebook, Youtube, Instagram) ale aj malé a slabo
+                zabezpečené Wi-Fi siete. Práve preto si rôzne firmy vyhľadávajú kybernetickú posilu vo forme tzv.
+                etického hekera. Jedná sa o overeného človeka, ktorý po dohode a podpísaní zmluvy s firmou realizuje
+                hekerské útoky na dané systémy firmy alebo ich produkt. Heker tak odhaľuje rôzne bezpečnostné slabiny
+                ktoré následne zaznamenáva do finálneho reportu. Firma si následne prevezme finálny report, a na základe
+                uvedených bezpečnostných slabín sa pokúsia tieto slabiny napraviť prípadne optimalizovať.
+            </p>
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'two_one' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

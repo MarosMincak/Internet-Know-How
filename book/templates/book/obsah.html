@@ -1,0 +1,88 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <nav>
+
+                <ul style="list-style: none">
+                    <li><a href="{% url 'domov' %}">Domov</a></li>
+                    <li><a href="{% url 'obsah' %}">Obsah</a></li>
+                </ul>
+
+                <ol>
+                    <li><a href="{% url 'one' %}">Internet - základ novodového života?</a></li>
+                    <li><a href="{% url 'two' %}">Digitalizácia ľudstva</a>
+                        <ol>
+                            <li><a href="{% url 'two_one' %}">Kybernetická bezpečnosť</a></li>
+                            <li><a href="{% url 'two_two' %}">Kybernetické útoky</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="{% url 'three' %}">Hrozby internetu</a>
+                        <ol>
+                            <li><a href="{% url 'three_one' %}">Bezpečné používanie internetu</a>
+                                <ol>
+                                    <li><a href="{% url 'three_one_one' %}">Tvorba hesla</a></li>
+                                    <li><a href="{% url 'three_one_two' %}">Ukladanie hesla</a></li>
+                                    <li><a href="{% url 'three_one_three' %}">Verejné siere (Wi-Fi)</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="{% url 'three_two' %}">Sociálne siete</a>
+                                <ol>
+                                    <li><a href="{% url 'three_two_one' %}">Pár základných tipov k bezpečnému používaniu
+                                        sociálnych sietí</a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li><a href="{% url 'three_three' %}">Počítačové vírusy a spam</a>
+                                <ol>
+                                    <li><a href="{% url 'three_three_one' %}">Najbežnejšie typy počítačových vírusov</a>
+                                    </li>
+                                    <li><a href="{% url 'three_three_two' %}">Mylné predstavy o počítačových
+                                        vírusoch</a></li>
+                                    <li><a href="{% url 'three_three_three' %}">Ako (ne)dostať počítačový vírus </a>
+                                    </li>
+                                    <li><a href="{% url 'three_three_four' %}">Ako identifikovať a zneškodniť počítačový
+                                        vírus?</a></li>
+                                </ol>
+                            </li>
+                            <li><a href="{% url 'three_four' %}">Spam</a>
+                                <ol>
+                                    <li><a href="{% url 'three_four_one' %}">Phishing</a></li>
+                                    <li><a href="{% url 'three_four_two' %}">Ako sa brániť proti Spamu a Phishingu </a>
+                                    </li>
+                                    <li><a href="{% url 'three_four_three' %}">Sociálne inžinierstvo</a></li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </li>
+                    <li><a href="{% url 'four' %}">Netiketa</a>
+                        <ol>
+                            <li><a href="{% url 'four_one' %}">Kyberšikana</a>
+                                <ol>
+                                    <li><a href="{% url 'four_one_one' %}">Ako sa kyberšikane vyvarovať a brániť</a>
+                                    </li>
+                                </ol>
+                            </li>
+
+                        </ol>
+                    </li>
+                    <li><a href="{% url 'five' %}">Dvojjazyčný výkladový slovník použitých pojmov</a></li>
+                </ol>
+                <ul style="list-style: none">
+                    <li><a href="{% url 'zoznam_pouzitych_zdrojov' %}">Zoznam použitých zdrojov</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'domov' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'one' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

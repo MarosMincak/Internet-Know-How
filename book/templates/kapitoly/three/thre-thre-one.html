@@ -1,0 +1,172 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <h3>Počítačový vírus</h3>
+            <div>
+                <p>Počítačové vírusy sú typom škodlivého softvéru, ktorý si získal svoje meno vďaka tomu, ako sa šíria
+                    „infikovaním“ iných súborov na disku alebo počítači. Vírusy sa potom šíria na ďalšie diskové
+                    jednotky a počítače stiahnutím z webových stránok, e-mailových príloh, zdieľaných jednotiek alebo
+                    pri prenášanú súborov pomocou fyzického nosiča (napr. USB)</p>
+            </div>
+            <h3>Počítačový červ (Worms)</h3>
+            <div>
+                <p>Na rozdiel od vírusov, červy nevyžadujú ľudskú pomoc aby sa mohli infikovať, replikovať alebo
+                    rozmnožovať. Hneď ako narušia systém, infikujú svoj vstupný bod a rozšíria sa cez zariadenie a po
+                    akejkoľvek sieti, ku ktorej sa zariadenie pripája. Využitím slabých miest v sieti - napríklad
+                    zmeškaných aktualizácií operačného systému (OS) alebo opráv aplikácií, slabého zabezpečenia e-mailov
+                    alebo zlých postupov v oblasti bezpečnosti internetu - sa červy môžu spúšťať, samoreplikovať a šíriť
+                    vysokou rýchlosťou keďže každá nová infekcia opakuje proces. Pôvodná funkcia počítačových červov
+                    bolo zaťažovať systémové prostriedky a znižovať výkon. To sa však rýchlo zmenilo a väčšina dnešných
+                    počítačových červov obsahujú škodlivé kódy určené na odcudzenie alebo odstránenie súborov.</p>
+            </div>
+            <h3>Advér (Adware)</h3>
+
+            <div>
+                <p>Jednou z najbežnejších nepríjemností v online priestore je advér. Programy Advér automaticky doručujú
+                    reklamy na hostiteľské počítače. Medzi známe príklady advér patria vyskakovacie reklamy na webových
+                    stránkach a reklamné správy, ktoré sú súčasťou rozhrania „bezplatného“ softvéru. Aj keď je väčšina
+                    advérov relatívne neškodných, iné varianty používajú nástroje na sledovanie a zhromažďovanie
+                    informácií o vašej polohe alebo histórii prehliadača. Advér väčšinou zhromažďuje informácie, aby
+                    zobrazoval lepšie zacielené reklamy. Niekedy sa však Advér používa na presmerovanie výsledkov
+                    vyhľadávania, zobrazovanie nepovolených vyskakovacích okien ktoré sa nedajú zavrieť alebo dokonca
+                    obsahujú aj odkaz na malvér ktorý môže napr. deaktivovať antivírus alebo implementovať do systému
+                    spyvér (spyware).</p>
+            </div>
+
+            <div>
+                <p>Technicky sa advér inštaluje s vedomím a súhlasom ľudí. Kedy ste si však naposledy prečítali niekoľko
+                    tisíc slovné vyhlásenie „Podmienky služby“? Kliknutím na tlačidlo „Súhlasím“ udeľujete súhlas.
+                    Pretože ste prijali a vyjadrili súhlas so zmluvnými podmienkami, tieto programy nemožno označiť ako
+                    škodlivý softvér. Dnešný antivírusový softvér tieto programy zvyčajne označuje ako „potenciálne
+                    nežiaduce programy“ (PUP).</p>
+            </div>
+
+            <h3>Spyvér (Spyware)</h3>
+
+            <div>
+                <p>Spyvér robí presne to, čo hovorí - sleduje, čo robíte pri počítači. Zhromažďuje údaje, ako sú
+                    stlačenia klávesov, návyky pri prehliadaní, údaje o polohe a dokonca aj prihlasovacie údaje. Aj keď
+                    advér môže zahŕňať „opätovné použitie“ zhromaždených údajov na predaj v zmysle servisných podmienok,
+                    spyvér je duplicitnejší (dvojaký). Spyvér sa považuje za malvér, pretože používatelia o jeho
+                    prítomnosti nevedia. Spyvér zhromažďuje a predáva vaše údaje tretím stranám, zvyčajne počítačovým
+                    zločincom, bez ohľadu na to, ako budú údaje použité. Spyvér môže tiež meniť konkrétne nastavenia
+                    zabezpečenia vášho počítača alebo zasahovať do sieťových pripojení.</p>
+            </div>
+
+            <div>
+                <p>Posledné roky sa zaznamenal nárast spyvéru, ktorý sleduje správanie používateľov na rôznych
+                    zariadeniach a fyzických miestach bez ich súhlasu. Napríklad bezplatná aplikácia pre počasie na
+                    vašom smartfóne mohla získať váš súhlas so zhromažďovaním a používaním vašich údajov o polohe,
+                    údajne na poskytovanie presnejších predpovedí. Súhlasili ste so zmluvnými podmienkami aplikácie,
+                    ktoré zahŕňajú jazyk umožňujúci opätovné použitie polohy, ako uznajú za vhodné, takže je to
+                    legitímne. Čo sa však stane, keď to zahŕňa predaj údajov o polohe komukoľvek, kto si to môže
+                    dovoliť, bez ohľadu na to, či ide o internetový obchod, ktorý sa pokúša vyplniť bannerové reklamy vo
+                    vašom prehliadači, alebo počítačový zločinec, ktorý porovnáva údaje o používateľoch mobilných
+                    telefónov s inými zdrojmi údajov?</p>
+            </div>
+
+            <h3>Ransomvér (Ransomware)</h3>
+
+            <div>
+                <p>Ransomvér infikuje váš počítač, šifruje vaše údaje PII (Personally identifiable information - osobne
+                    identifikovateľné informácie = akákoľvek informácia ktorá pomáha počítaču identifikovať používateľa
+                    a ďalšie citlivé údaje, ako sú osobné alebo pracovné dokumenty, a za ich vydanie požaduje výkupné.
+                    Ak odmietnete zaplatiť, údaje sa odstránia. Niektoré varianty ransomvéru blokujú všetok prístup do
+                    vášho počítača. Niekedy môžu tvrdiť, že sú dielom legitímnych orgánov činných v trestnom konaní, a
+                    naznačiť, že vás prichytili, že robíte niečo nezákonné.</p>
+            </div>
+
+            <div style="text-align: center;">
+                <img style="width: 100%" src="{% static 'img/ransomweeris.png' %}" alt="Ransomweer">
+            </div>
+            <br>
+
+            <h3>Počítačový bot (bots)</h3>
+
+            <div>
+                <p>Počítačový boti sú programy určené na automatické vykonávanie konkrétnych operácií. Aj keď slúžia na
+                    rôzne legitímne účely, sú tiež populárnym typom škodlivého softvéru. Boti, ktorí sa nachádzajú v
+                    počítači, môžu spôsobiť, že toto zariadenie vykoná konkrétne príkazy bez súhlasu alebo vedomia
+                    používateľa. Hackeri sa tiež môžu pokúsiť infikovať viac počítačov rovnakým botom, aby vytvorili
+                    „botnet“ - skratku pre sieť botov. Tieto zombie botnety umožňujú hackerom vzdialene spravovať
+                    napadnuté počítače, umožňujúc im kradnúť citlivé údaje, špehovať aktivity používateľov, automaticky
+                    distribuovať spam alebo uskutočňovať ničivé útoky - <strong>Distributed-Denial-of-Service
+                        (DDoS)</strong> na
+                    počítačové siete a webové stránky.</p>
+            </div>
+
+            <div>
+                <p><strong>DDoS</strong> je typ útoku pri ktorom sa väčšinou využivajú počítačový boti. Jedná sa o
+                    preťaženie servera (napr. webovej stránky) vďaka ohromnému počtu požiadaviek ktoré sú na tento
+                    server odosielané (napr. len samotné obnovovanie stránky dookola čo zapríčiňuje odosielanie údajov
+                    servera používateľovi). Malé servery sa takýmto spôsobom môžu ľahko preťažiť a spomaliť, prípadne
+                    úplne vypnúť či reštartovať.</p>
+            </div>
+
+            <h3>Rootkits</h3>
+
+            <div>
+                <p>Rootkity umožňujú vzdialený prístup alebo kontrolu nad počítačom treťou stranou. Tieto programy sú
+                    užitočné pre odborníkov v oblasti IT, ktorí sa pokúšajú na diaľku vyriešiť problémy so sieťou, ale
+                    vďaka ich prístupu sa môžu veľmi ľahko stať potenciálne nebezpečnými. Po nainštalovaní do vášho
+                    počítača umožňujú rootkity útočníkom prevziať úplnú kontrolu nad vaším počítačom, aby ukradli údaje,
+                    sledovali vás alebo nainštalovali ďalší malvér. Rootkity sú navrhnuté tak, aby zostali nepovšimnuté
+                    a aktívne skrývali svoju prítomnosť a prítomnosť iného škodlivého softvéru, ktorý inštalujú.</p>
+            </div>
+
+            <div>
+                <p>Rovnako ako väčšina počítačových vírusov a škodlivých softvérov, aj keď to nie je zárukou
+                    bezpečnosti, ochrana vašich zariadení pred rootkitmi začína udržiavaním aktuálneho stavu na všetkých
+                    aktualizáciách a opravných aktualizáciách operačného systému a aplikácií, aby sa eliminovali
+                    potenciálne cesty infekcie. Účinná detekcia rootkitov vyžaduje pre neobvyklé správanie systému
+                    monitorovanie v reálnom čase - nielen periodické kontroly diskovej jednotky.</p>
+            </div>
+
+            <h3>Trójsky kôň (Trojan Horse)</h3>
+
+            <div>
+                <p>Trójsky kôň je typ škodlivého softvéru, ktorý sa často maskuje ako legitímny softvér. Trójske kone
+                    môžu byť ovládané počítačovými zlodejmi a hackermi, ktorí sa snažia získať prístup do systémov
+                    používateľov. Trójsky kôň musí byť pre svoju prácu spustený používateľom. Jedna z ciest ako donútiť
+                    takýto program spustiť je pomocou istou formou sociálneho inžinierstva. Po aktivácii môžu trójske
+                    kone umožniť počítačovým zločincom špehovať vás, ukradnúť vaše citlivé dáta a získať prístup do
+                    vášho systému pomocou zadných vrátok. Trójsky kôň môže infikovať zariadenia niekoľkými spôsobmi -
+                    napríklad:</p>
+            </div>
+
+            <ul class="tipy">
+                <li>Používateľ sa stane obeťou útoku typu alebo iného sociálneho inžinierstva otvorením infikovanej
+                    prílohy e-mailu alebo kliknutím na odkaz s presmerovaním na stránku so škodlivým kódom.
+                </li>
+                <li>Používateľovi sa zobrazí vyskakovacie okno pre falošný antivírusový program, ktorý tvrdí, že je váš
+                    počítač infikovaný, a vyzve vás na spustenie programu, ktorý ho vyčistí. Toto sa nazýva „scareware“.
+                    V skutočnosti si používatelia sťahujú trójskeho koňa do svojho zariadenia.
+                </li>
+                <li>Používateľ navštívi škodlivú webovú stránku, ktorá začne automaticky sťahovať súbory do zariadenia,
+                    ktoré sa tvária ako neškodne a vydávajú sa za neškodný,užitočný softvér.
+                </li>
+                <li>oužívateľ si z nedôveryhodnej webovej stránky stiahne program, ktorého vydavateľ je neznámy.</li>
+                <li>Útočníci inštalujú trójskeho koňa využívaním zraniteľnosti softvéru alebo neoprávneným prístupom.
+                </li>
+                <li>Hackeri vytvárajú falošnú sieť hotspotov Wi-Fi, ktorá vyzerá ako sieť, ku ktorej sa používateľ
+                    pokúša pripojiť. Keď sa používateľ pripojí k tejto sieti, môže byť presmerovaný na falošné webové
+                    stránky, ktoré obsahujú chyby prehliadača a ktoré presmerujú akýkoľvek súbor, ktorý sa pokúsi
+                    stiahnuť.
+                </li>
+            </ul>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_two' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

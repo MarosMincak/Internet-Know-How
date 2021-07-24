@@ -1,0 +1,81 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div>
+                <p>
+                    Súkromie je jedno z najdôležitejších vecí ktoré v našom živote máme. Preto by sme s ním mali
+                    zaobchádzať opatrne. Nasledujúce tipy poukazujú na bežné problémy, ktorým by sme sa mali vyvarovať:
+                </p>
+            </div>
+
+            <ul class="tipy">
+                <li><strong>Nastavenia ochrany súkromia a zabezpečenia existujú z nejakého dôvodu:</strong> Zmeňte si
+                    prednastavené nastavenia ochrany súkromia a zabezpečenia v sociálnych sieťach tak, aby sa vašim
+                    potrebám aplikácia prispôsobila. Je potrebné si nastaviť hlavne kto vidí váš profil, príspevky,
+                    fotky atp.
+                </li>
+                <li><strong>Raz na internete, navždy na internete:</strong> Chráňte svoju reputáciu na sociálnych
+                    sieťach. To, čo zverejníte online, zostane online. Pred zverejnením obrázkov si dobre rozmyslite,
+                    ktoré by ste nechceli, aby videli vaši rodičia, kamaráti alebo budúci zamestnávatelia. Posledný
+                    výskum z roku 2017 zistil, že 70 percent zamestnávateľov odmietlo uchádzačov o zamestnanie na
+                    základe informácií, ktoré našli online.
+                </li>
+                <li><strong>Udržujte svoje osobné údaje osobné:</strong> Buďte opatrní v súvislosti s tým, koľko
+                    osobných informácií poskytujete na stránkach sociálnych sietí. Čím viac informácií zverejníte, tým
+                    ľahšie môžu byť tieto informácie zneužité a použité proti vám. Tieto osobné informácie môžu taktiež
+                    slúžiť na ukradnutie vašej totožnosti alebo na spáchanie ďalších trestných činov, ako je
+                    prenasledovanie.
+                </li>
+                <li><strong>Spoznajte a spravujte svojich priateľov:</strong>Jeden z problémov sociálnych sietí je
+                    vytváranie si veľkého množstva priateľov z mnohých aspektov vášho života. To neznamená, že všetci
+                    priatelia sú si rovní. Pomocou nástrojov môžete spravovať informácie, ktoré zdieľate s priateľmi na
+                    osobnom profile, v rôznych skupinách atp.. Ak sa snažíte vytvoriť verejnú osobnosť ako blogger,
+                    influencer alebo youtuber, vytvorte si otvorený profil alebo stránku s fanúšikmi, ktorá podporuje
+                    širokú účasť a obmedzuje osobné informácie. Použite svoj osobný profil, aby ste svojím skutočným
+                    priateľom (tým, ktorých poznáte a ktorým dôverujete) poskytovali aktuálne informácie o vašom
+                    každodennom živote.
+                </li>
+                <li>
+                    <strong>Buďte úprimní, ak vám je to nepríjemné:</strong>Ak o vás priateľ zverejní niečo, čo vám je
+                    nepríjemné alebo sa vám zdá nevhodné, dajte mu vedieť. Jedná sa hlavne o označovanie na fotkách
+                    alebo šírenie informácii o vašej osobe. Rovnako buďte ústretoví aj voči svojim priateľom a
+                    zverejnujte fotky a informácie len po súhlase daného človeka prípadne skupine ľudí. Ľudia majú rôzne
+                    tolerancie toho, koľko toho o nich svet vie a preto tieto rozdiely musíme rešpektovať.
+                </li>
+                <li><strong>V prípade núdze budte pripravený:</strong>Ak vás niekto obťažuje alebo sa vám vyhráža,
+                    odstráňte ho zo zoznamu priateľov, zablokujte ho a nahláste to rodičovi, učiteľovi a správcovi webu.
+                </li>
+                <li><strong>Vlastnite svoju online prítomnosť:</strong>Ak je to možné, nastavte súkromie a zabezpečenie
+                    na webových stránkach na svoju úroveň pohodlia na zdieľanie informácií. Je v poriadku obmedziť, ako
+                    a s kým zdieľate informácie.
+                </li>
+                <li><strong>Jedinečné heslo, pre jedinečný účet:</strong>Ak budete mať pre každý účet iné heslo, pomôže
+                    vám to zabezpečiť nielen vaše účty, ale aj súkromie. Ak sa náhodou niekomu podarí získať vaše heslo
+                    na jednej platforme ktoré zároveň používate všade, je dosť pravdepodobné že prídete aj o účty na
+                    iných stránkach, kde toto heslo používate.
+                </li>
+                <li><strong>Ak máte pochybnosti, konajte:</strong>Odkazy v e-mailoch, tweetoch, príspevkoch a online
+                    reklame sú často pokusmi zločincov o krádež vašich osobných údajov. Aj keď zdroj poznáte, ak niečo
+                    vyzerá podozrivo, odstráňte a zablokujte ho.
+                </li>
+            </ul>
+
+            <div style="text-align: center;">
+                <img style="width: 70%" src="{% static 'img/social-networks.png' %}" alt="Sociálne siete">
+            </div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_two' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

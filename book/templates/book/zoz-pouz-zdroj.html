@@ -1,0 +1,50 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <ul>
+                <li><u><a href="https://sileo.com/facebook-status-update-leads-to-robbery/" target="_blank">https://sileo.com/facebook-status-update-leads-to-robbery/</a></u>
+                </li>
+                <li><u><a href="https://www.howtogeek.com/195430/how-to-create-a-strong-password-and-remember-it/"
+                          target="_blank">https://www.howtogeek.com/195430/how-to-create-a-strong-password-and-remember-it/</a></u>
+                </li>
+                <li><u><a
+                        href="http://press.careerbuilder.com/2017-06-15-Number-of-Employers-Using-Social-Media-to-Screen-Candidates-at-All-Time-High-Finds-Latest-CareerBuilder-Study"
+                        target="_blank">http://press.careerbuilder.com/2017-06-15-Number-of-Employers-Using-Social-Media-to-Screen-Candidates-at-All-Time-High-Finds-Latest-CareerBuilder-Study</a></u>
+                </li>
+                <li><u><a
+                        href="https://www.bloomberg.com/news/articles/2019-08-15/ecb-says-one-of-its-websites-was-hacked-data-possibly-captured"
+                        target="_blank">https://www.bloomberg.com/news/articles/2019-08-15/ecb-says-one-of-its-websites-was-hacked-data-possibly-captured</a></u>
+                </li>
+                <li><u><a
+                        href="https://books.google.sk/books?id=QEARBQAAQBAJ&newbks=1&newbks_redir=0&lpg=PT224&dq=spanish+prisoners+scam&pg=PT136&redir_esc=y#v=onepage&q&f=false"
+                        target="_blank">Beggars, Cheats and Forgers: A History of Frauds Throughout the Ages</a></u>
+                </li>
+                <li><u><a href="https://www.kaspersky.com/resource-center/definitions/what-is-cyber-security"
+                          target="_blank">https://www.kaspersky.com/resource-center/definitions/what-is-cyber-security</a></u>
+                </li>
+                <li><u><a href="https://cybriant.com/comprehensive-list-of-all-types-of-internet-threats/"
+                          target="_blank">https://cybriant.com/comprehensive-list-of-all-types-of-internet-threats/</a></u>
+                </li>
+                <li><u><a href="https://staysafeonline.org/stay-safe-online/securing-key-accounts-devices/social-media/"
+                          target="_blank">https://staysafeonline.org/stay-safe-online/securing-key-accounts-devices/social-media/</a></u>
+                </li>
+                <li><u><a href="https://www.malwarebytes.com/spam" target="_blank">https://www.malwarebytes.com/spam</a></u>
+                </li>
+                <li><u><a href="http://www.albion.com/netiquette/corerules.html" target="_blank">http://www.albion.com/netiquette/corerules.html</a></u>
+                </li>
+            </ul>
+
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'five' %}" role="button">{{ text_previous }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

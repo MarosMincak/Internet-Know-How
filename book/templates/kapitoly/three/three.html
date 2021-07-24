@@ -1,0 +1,25 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+            <p>
+                Ako už bolo spomenuté, všetko dobré prináša aj niečo zlé. Čo sa týka príchodom digitalizácii ľudstva sa
+                budeme veľmi často stretávať s pojmom Kybernetická bezpečnosť (Cybersecurity). Ak sa nad tým znovu
+                zamyslíme, dávame internetu moc pracovať s niečím čo je nám najbližšie – informáciou. Môže to byť úplne
+                akákoľvek drobnosť, ale ak sa tých drobností nazbiera viac a viac, môže sa jednať už o dosť veľký celok
+                ktorý môže, no nemusí byť zneužitý alebo použitý proti nám. Dosť často odovzdávame internetu informáciu,
+                ktorá sa môže týkať našich osobných údajov ako napríklad číslo platobnej karty, adresa bydliska, heslá k
+                rôznym účtom a iné.
+            </p>
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'two_two' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,553 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+            <div>
+                <table id="theTable" class="footable table outerBorder footable-loaded isInnerColor">
+                    <thead>
+                    <tr>
+                        <th id="thCol0" data-type="alpha" class="footable-sortable">Slovenský výraz<span
+                                class="footable-sort-indicator"></span></th>
+                        <th id="thCol1" data-type="alpha" class="footable-sortable">Definícia v slovenskom jazyku<span
+                                class="footable-sort-indicator"></span></th>
+                        <th id="thCol2" data-type="alpha" class="footable-sortable">English translation<span
+                                class="footable-sort-indicator"></span></th>
+                        <th id="thCol3" data-type="alpha" class="footable-sortable">Definition in English<span
+                                class="footable-sort-indicator"></span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="footableOdd">
+                        <td>Počítačový vírus (malvér)</td>
+                        <td>Počítačový vírus je široký pojem pre označenie škodlivého softvéruktorýsa dokáže v počítači
+                            šíriť nezávisle od používateľa. Počítačový vírus napadá jednotlivé časti počítača,
+                            softvérové ale aj hardvérové, čím dokáže modifikovať, mazať alebo manipulovať s údajmi
+                            uloženom na počítači.
+                        </td>
+                        <td>Computer virus (malware)</td>
+                        <td>Computer virus is a broad term for describing malicious software (program), that is designed
+                            to spread on your device with tendencies to cause harm the computer, modify or delete its
+                            files.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Heslo</td>
+                        <td>Heslo je reťazec znakov slúžiaci na overenie totožnosti používateľa v systéme. pozostáva z
+                            minimálne 8 znakov, ktoré tvoria kombináciu veľkých a malých písmen a čísiel.
+                        </td>
+                        <td>Password</td>
+                        <td>Password is a string of a characters used to verify the user’s request to log in. A
+                            recommended password consists of minimum 8 characters that are combination of uppercased
+                            symbols, lowercased symbols and numbers.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Trojský kôň</td>
+                        <td>Trójsky je typ škodlivého softvéru, ktorý sa dostane do počítača prostredníctvom siete alebo
+                            prídavného zariadenia (USB, CD...) vo forme spustiteľného formátu (.exe alebo iné). Trojský
+                            kôň sa najčastejšie šíria pirátskymi verziami rôznych platených hier alebo programov.
+                        </td>
+                        <td>Trojan horse</td>
+                        <td>Trojan is a type of computer virus that disguises itself as legitimate software.They begin
+                            their malicious tendencies after opening corrupted executable file format (.exe or another
+                            suffix that represents application).
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Spyvér</td>
+                        <td>Spyvérje typ škodlivého softvéru, ktorý zhromažďuje údaje o používateľovi a jeho správaní na
+                            internete. Spyvér sledujehistóriu prehľadania na internete a kradne citlivé údaje ako sú
+                            napríklad uložené heslá alebo kreditné karty. Niektoré typy tohto softvéru dokážu napadať
+                            nie len softvérovú, ale aj hardvérovú časť zariadenia. Tým pádom sa dokážu napojiť napríklad
+                            na kameru napadnutého zariadenia a sledovať používateľove činnosti prípadne aj pohyb pomocou
+                            GPS navigácie a fotiek zo zariadenia.
+                        </td>
+                        <td>Spyware</td>
+                        <td>Spyware is a type of computer virus which tends to steal all the sensitive data from user's
+                            device, such as creditcard numbers or passwords. Spyware can also be capable of connecting
+                            to user’s webcam and literally spy their activities.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Počítačový červ</td>
+                        <td>Počítačový červ je typ škodlivého softvéru, ktorý sa dokáže sám replikovať a tým zahlcovať
+                            pamäť zariadenia akoaj spomaľovať jeho výkon ktorý je vnímateľný pri bežnej, nenáročnej
+                            práci.
+                        </td>
+                        <td>Computer worm</td>
+                        <td>A computer worm is a type of malicious software that can replicate itself and thus overwhelm
+                            the device's memory as well as slow down its performance, which is perceived in normal,
+                            unpretentious work.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Advér</td>
+                        <td>Advér je typ škodlivého softvéru, ktorý propaguje rôzne produkty pomocou reklám ktoré
+                            náhodne vyskakujú počas bežnej práci na počítači alebo na akomkoľvek inom zariadení. Advér
+                            zvyčajne býva neškodný a svojim pôsobením nijako neznevýhodňuje prácu na zariadení
+                        </td>
+                        <td>Adware</td>
+                        <td>Adware is a type of malicious software that promotes various products using ads that
+                            occasionally pop up while you work on your computer or any other device. Adware is usually
+                            harmless and does not disadvantage work on the device
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Ransomvér</td>
+                        <td>Ransomware je typ škodlivého softvéru využívaný tzv. Hackermi, ktorý blokuje prístup k
+                            súborom. Hackeri tento nástroj využívajú ako techniku vydierania alebo získania finančných
+                            prostriedkov od používateľa.
+                        </td>
+                        <td>Ransomware</td>
+                        <td>Ransomware is a type of malicious software that is used by hackers to blackmail the user.
+                            Ransomware encrypts data and demand money from the user in order to unlock their files.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Botnet</td>
+                        <td>Botnet je označenie počítačovej siete infikovanej týmto malvérom. Napadnuté počítače tak
+                            dokáže ovládať tzv. hacker, ktorý ich využíva prevažne na rozposielavanie správ iným
+                            používateľom.
+                        </td>
+                        <td>Botnet</td>
+                        <td>Botnet is the designation of a computer network infected with this malware. The infected
+                            computers can thus control the so-called. a hacker that uses them mainly to send messages to
+                            other users.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Heker</td>
+                        <td>Heker je označenie pre používateľa internetu s výbornými technickými znalosťami ktoré
+                            využíva pri práci so zariadeniami. Heker obvykle využíva svoje dovednosti na získanie
+                            nepovoleného prístupu do siete alebo systému za účelom kradnutia osobných údajov.
+                        </td>
+                        <td>Hacker</td>
+                        <td>Hacker is the user of the internet who uses his computer, networking and other skills to
+                            overocme a technical problem. A hacker typically uses his skills to gain unauthorized access
+                            to a network or system to steal personal information.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Etický hacker</td>
+                        <td>Etický hacker je typ hackera, ktorý vykonáva tzv. penetračné testy. Etický hacker pomáha
+                            rôznym organizáciam pri testovaní ich produktu, aplikácie alebo webstránky z hľadiska
+                            bezpečnosti.
+                        </td>
+                        <td>Ethical hacker</td>
+                        <td>Ethical hacker is a type of a hacker that performs penetration tests. An ethical hacker
+                            assists different organizations in testing their product, application, or website for
+                            security.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Phishing</td>
+                        <td>Phishing je označenie útoku ktorého účelom je kradnutie a zneužívanie citlivých informácií
+                            ako sú čísla kreditných kariet, účty alebo rôzne prístupové heslá. Phisnig sa šíri pomocou
+                            emailovu ktoré sa tvária legitímne. Väčšina týchto podvodov používa protokol HTTP a ich
+                            doména sa nezhoduje s originálnou stránkou.
+                        </td>
+                        <td>Phishing</td>
+                        <td>Phishing is an attack designed to steal or misuse sensitive information such as credit card
+                            numbers, accountsand passwords. Phisnig is spread by email that looks legitimate. Most of
+                            these scams use HTTP protocol and their domain does not match the original page.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Internet</td>
+                        <td>Internet je označenie pre sieť vzájomne prepojených počítačov. Prístup na internet môžeme
+                            získať prostredníctvom internetového poskytovateľa. Internet slúži pre rýchlejšiu
+                            komunikáciu medzi používateľmi, zdieľanie fotiek a dokumentov, ale aj ako zdroj zábavy.
+                        </td>
+                        <td>Internet</td>
+                        <td>The Internet is a network of interconnected computers. We can access the Internet through an
+                            Internet provider. The Internet is used for faster communication among users, sharing photos
+                            and documents, but also as a source of entertainment.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>HTTPS</td>
+                        <td>HTTPS (HyperText Transfer Protocol Secure) umožňuje chránení prístup k webovému serveru
+                            vďaka šifrovaniu SSL alebo TSL. Heker, alebo iný útočník má tak oveľa menšiu šancu na úspech
+                            pri kradnutí citlivých údajov.
+                        </td>
+                        <td>HTTPS</td>
+                        <td>HTTPS (HyperText Transfer Protocol Secure) encrypts the communication between the user and
+                            the Web server with SSL or TSL encryption. A hacker or other attacker has a much lower
+                            chance of success in stealing sensitive data.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>HTTP</td>
+                        <td>HTTP (Hypertext Transfer Protocol) je základný protokol určený na prenos hypertextových
+                            dokumentov medzi serverom a prehliadačom.
+                        </td>
+                        <td>HTTP</td>
+                        <td>HTTP (Hypertext Transfer Protocol) is a basic protocol for transferring hypertext documents
+                            between a server and a browser.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Sociálne inžinierstvo</td>
+                        <td>Sociálne inžinierstvo je typ útoku pomocou manipulácie ľudí za účelom získania dôveryhodných
+                            informácií alebo vykonania konkrétnej akcie na ich počítači.
+                        </td>
+                        <td>Social Engineering</td>
+                        <td>Social engineering is a type of attack by manipulating people to gain credible information
+                            or to take specific action on their computer.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>DoS</td>
+                        <td>DoS (Denial of Service) je typ útoku pri ktorom sa zamietne nejaká služba. DoS sa často
+                            spája so zahltením vnútornej siete požiadavkami ktoré sieť nestíha spracovať.
+                        </td>
+                        <td>DoS</td>
+                        <td>DoS (Denial of Service) is a type of attack that denies a service. DoS is often associated
+                            with overwhelming the internal network with messages that the network cannot handle.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>DDoS</td>
+                        <td>DDoS (Distributed Denial of Service) je rozšírenie DoS útoku o viacero používateľov. Jedná
+                            sa o zahltenie vnútornej siete správami, ktoré systém nedokáže spracovať.
+                        </td>
+                        <td>DDoS</td>
+                        <td>DDoS (Distributed Denial of Service) is an extension of DoS attack by multiple users. This
+                            is to overload the internal network with messages that the system cannot process.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Darkweb</td>
+                        <td>Darkweb je zašifrovaný webový obsah ku ktorému sa dá dostať len za pomoci špecialného
+                            softvéru.
+                        </td>
+                        <td>Darkweb</td>
+                        <td>Darkweb is encrypted worldwide web content that can only be accessed with special
+                            software.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Firewall</td>
+                        <td>Firewall je softvér ktorý bráni pred neoprávnenými prienikmi medzi sieťou a počítačom.</td>
+                        <td>Firewall</td>
+                        <td>A firewall is software that prevents unauthorized intrusions between a network and a
+                            computer.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Antivírus</td>
+                        <td>Antivírus je softvér ktorého cieľom je identifikovať a eliminovať počítačové vírusy.
+                            Antivírus zabezpečuje skenovanie systému ale aj prídavných zariadení.
+                        </td>
+                        <td>Antivirus</td>
+                        <td>Antivirus is software designed to identify and eliminate computer viruses. The antivirus
+                            ensures scanning of the system as well as additional devices.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Prehliadač</td>
+                        <td>Prehliadač je softvér umožňúci zobrazovanie internetových stránok ktoré primárne komunikujú
+                            s protokolom HTTP.
+                        </td>
+                        <td>Browser</td>
+                        <td>A browser is software that allows you to view web pages that primarily communicate with the
+                            HTTP protocol.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Spam bot</td>
+                        <td>Spam bot je program podobný počítačovému vírusu, ktorý bez vedomia používateľa rozosiela
+                            nevyžiadanú poštu iným používateľom.
+                        </td>
+                        <td>Spam bot</td>
+                        <td>Spam bot is a computer virus-like program that sends spam to other users without the user's
+                            knowledge.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Hoax</td>
+                        <td>Hoax je falošná poplašná správa ktorá sa šíri prostredníctvom sociálnych médii a
+                            internetu.
+                        </td>
+                        <td>Hoax</td>
+                        <td>Hoax is fake alarm message that spreads through social media and the Internet.</td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Sniffer</td>
+                        <td>Sniffing je odchytávanie informácií od tretej osoby za pomoci softvéru, hardvéru alebo aj
+                            osoby ktorá odpočúva konverzácie.
+                        </td>
+                        <td>Sniffer</td>
+                        <td>Sniffing is the interception of information from a third party with the help of software,
+                            hardware, or even a person listening to conversations.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>IP adresa</td>
+                        <td>IP adresa slúži ako unikátne číslo priradené každému zariadeniu pripojenému k sieti, ktoré
+                            slúži na identifikáciu zariadenia.
+                        </td>
+                        <td>IP adresa</td>
+                        <td>IP address is a unique number assigned to each device connected to the network to identify
+                            the device.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Keylogger</td>
+                        <td>Keylogger je softvér, ale môže byť aj hardvér, ktorý zaznamenáva stlačené klávesy do
+                            textového dokumentu ktorý je následne zaslaný útočníkovi. Keylogger sa väčšinou využíva pre
+                            získanie prístupu k rôznym účtom.
+                        </td>
+                        <td>Keylogger</td>
+                        <td>Keylogger is software, but it can also be hardware that records keystrokes in a text
+                            document that is then sent to the attacker. Keylogger is mostly used to gain access to
+                            various accounts.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Vishing</td>
+                        <td>Je typ sociálneho inžinierstva, pri ktorom dochádza k telefonickému kontaktu medzi útočníkom
+                            a jeho obeťou, kde sa útočník spravidla snaží získať citlivé údaje.
+                        </td>
+                        <td>Vishing</td>
+                        <td>Vishing is a type of social engineering that involves phone call between an attacker and his
+                            victim, in which the attacker usually tries to get sensitive data from his victim.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Smishing</td>
+                        <td>Smishing je typ phishingu, pri ktorom dochádza ku kontaktu medzi útočníkom a obeťou za
+                            pomoci falošnej SMS správy. Útočník sa spravidla predstavuje ako zamestnanec banky.
+                        </td>
+                        <td>Smishing</td>
+                        <td>Smishing is a type of phishing that involves contact between an attacker and a victim using
+                            an SMS message. The attacker usually presents himself as a bank employee.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Pharming</td>
+                        <td>Pharming je založený na zmene domény. Jedná sa o stránky ktoré sa vyzerajú legitímne ale ich
+                            doména sa nezhoduje s originálnou stránkou.
+                        </td>
+                        <td>Pharming</td>
+                        <td>Pharming is based on domain change. These are sites that look legitimate, but their domain
+                            does not match the original site.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Slovníkový útok</td>
+                        <td>Slovníkový útok je metóda, ktorá sa používa na získanie hesla za pomoci náhodného typovania
+                            slov zo slovníka.
+                        </td>
+                        <td>Dictionary attack</td>
+                        <td>Dictionary attack is a method of breaking the password using words from the dictionary.</td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Útok hrubou silou</td>
+                        <td>Útok hrubou silou je metóda zisťovania hesla za pomoci softvéru, ktorý skúša náhodné
+                            kombinácie čísel a písmen.
+                        </td>
+                        <td>Brute-force attack</td>
+                        <td>A brute force attack is a method of breaking a password using software that tests random
+                            combinations of numbers and letters.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>E-mailový červ</td>
+                        <td>E-mailový červ je počítačový vírus ktorý sa šíri elektronickou poštou.</td>
+                        <td>E-mail worm</td>
+                        <td>An e-mail worm is a computer virus that spreads by e-mail.</td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Sieťový červ</td>
+                        <td>Sieťový červ je počítačový vírus ktorý sa šíri prostredníctvom šieťových paketov v
+                            počítačovej sieti.
+                        </td>
+                        <td>Network worm</td>
+                        <td>A network worm is a computer virus that spreads through network packets on a computer
+                            network.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Browser hijacker</td>
+                        <td>Browser hijacker je typ škodlivého softvéru ktorý upravuje nastavenia internetového
+                            prehliadača tak, aby sa k používateľovi dostalo čo najviac reklám z ktorých má útočník
+                            finančný príjem.
+                        </td>
+                        <td>Browser hijacker</td>
+                        <td>Browser hijacker is a type of malicious software that adjusts Internet browser settings to
+                            get as many ads as possible to the user from which the attacker earns money.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Vzdialený prístup</td>
+                        <td>Programy so vzdialeným prístupom umožňujú ovládanie počítača na diaľku.</td>
+                        <td>Remote administration</td>
+                        <td>Remote administration is a type of software that allows you to control your computer
+                            remotely.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>E-mailová bomba</td>
+                        <td>E-mailová bomba je metóda spamu, ktorej cieľom je zaplniť e-mailovú schránku v čo najkratšom
+                            čase.
+                        </td>
+                        <td>E-mail bomb</td>
+                        <td>An e-mail bomb is a spam method designed to fill your email in the shortest time.</td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Malvertising</td>
+                        <td>Malvertising je typ škodlivého softvéru ktorý upravuje presmerovanie odkazov legitímnych
+                            reklám na škodlivé stránky ktoré môžu obsahovať ďalšie vírusy.
+                        </td>
+                        <td>Malvertising</td>
+                        <td>Malvertising is a type of malicious software that redirects links from legitimate ads to
+                            malicious sites that may contain another viruses.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Spear phishing</td>
+                        <td>Spear phishing je typ e-mailu smerovaný na konkrétnu osobu, ktorý obsahuje prílohu so
+                            škodlivým softvérom.
+                        </td>
+                        <td>Spear phishing</td>
+                        <td>Spear phishing is a type of email directed to a specific person that contains an attachment
+                            with malicious software.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Whaling</td>
+                        <td>Whaling je typ e-mailu smerovaný na konkrétnu osobu obvykle s vysokým postavením, ktorý
+                            obsahuje prílohu so škodlivým softvérom.
+                        </td>
+                        <td>Whaling</td>
+                        <td>Whaling is a type of e-mail directed to a specific person, usually in a high position, that
+                            contains an attachment with malicious software.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Dumpster diving</td>
+                        <td>V IT terminológii, dumpster diving referuje na metódu získania osobných údajov z výtlačkov
+                            ktoré ostali neskartované v smetnom koši.
+                        </td>
+                        <td>Dumpster diving</td>
+                        <td>In IT terminology, dumpster diving refers to the method of obtaining personal data from
+                            printouts that have not been shredded in the trash.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Režim inkognito</td>
+                        <td>Režim inkognito je režim v ktorom je možné prehliadať webové stránky bez toho, aby sa
+                            ukladala história prehliadania alebo súbory cookies. Aktivita na internete sa v tomto režime
+                            aj napriek tomu zobrazuje poskytovateľovi internetu, zamestnávateľovi a správcovi internetu.
+                        </td>
+                        <td>Incognito mode</td>
+                        <td>Incognito mode is a mode in which you can browse websites without saving your browsing
+                            history or cookies. Internet activity in this mode is still displayed to the Internet
+                            provider, employer and Internet administrator.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Detský režim</td>
+                        <td>Detský režim je typ filtrovania obsahu aplikácie alebo webovej stránky podľa výberu
+                            používateľa.
+                        </td>
+                        <td>Child Mode</td>
+                        <td>Child Mode is a type of content filtering for an app or website of a user's choice.</td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Kyberšikana</td>
+                        <td>Kyberšikana je typ šikany ktorá využíva sociálne médiá a internet ako hlavný zdroj
+                            ohovárania a ponižovania osoby.
+                        </td>
+                        <td>Cyberbulling</td>
+                        <td>Cyberbullying is a type of bullying that uses social media and the Internet as the main
+                            source of defamation and humiliation.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Pirát</td>
+                        <td>Pirát je označenie pre človeka ktorý šíri nelegálne stiahnutý obsah prostredníctvom
+                            internetu bez povolenia majiteľa.
+                        </td>
+                        <td>Pirate</td>
+                        <td>Pirate is a label for a person who disseminates illegally downloaded content over the
+                            Internet without the owner's permission.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Sťahovanie</td>
+                        <td>Sťahovanie je termín ktorý označuje ukladanie súborov alebo dokumentov do počítača z
+                            internetu za pomoci internetového prehliadača alebo inej aplikácie.
+                        </td>
+                        <td>Downloading</td>
+                        <td>Downloading is a term that refers to the storage of files or documents on your computer from
+                            the Internet using a web browser or other application.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Šifrovanie</td>
+                        <td>Šifrovanie je proces kódovania informácií tak, aby ich neoprávnené osoby nedokázali
+                            prečítať.
+                        </td>
+                        <td>Encrypting</td>
+                        <td>Encryption is the process of encoding information so that unauthorized persons cannot read
+                            it.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Internetbanking</td>
+                        <td>Internetbanking je služba poskytovaná bankou vďaka ktorej je možné vykonávať úhrady alebo
+                            meniť rôzne nastavenia pomocou internetu.
+                        </td>
+                        <td>Internetbanking</td>
+                        <td>Internetbanking is a service provided by a bank that makes it possible to make payments or
+                            change various settings using the Internet.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Bezdrôtová technológia prenosu dát (Wi-Fi)</td>
+                        <td>Bezdrôtová technológia prenosu je technológia, ktorá používa mikrovlny slúžiace na
+                            bezdrôtové pripojenie zariadení v sietí ktoré následne môžu využívať služby internetu.
+                        </td>
+                        <td>Wireless Fidelity (Wi-Fi)</td>
+                        <td>Wireless transmission technology is a technology that uses microwaves to wirelessly connect
+                            devices in a network that can then use the Internet.
+                        </td>
+                    </tr>
+                    <tr class="footableOdd">
+                        <td>Sociálne siete</td>
+                        <td>Sociálne siete sú komunikačné kanály pre používateľov internetu, na ktorých používatelia
+                            medzi sebou komunikujú, zdieľajú fotky alebo súbory a zabávajú.
+                        </td>
+                        <td>Social media</td>
+                        <td>Social media is a channel of communication for Internet users where users interact, share
+                            photos or files and have fun.
+                        </td>
+                    </tr>
+                    <tr class="footableEven">
+                        <td>Cookies</td>
+                        <td>Cookies sú súbory, ktoré sa dostávajú do používateľovho počítača prostredníctvom
+                            prehľadávania na internete. Tieto súbory slúžia ako identifikácia používateľa vďaka ktorým
+                            nám internet priraďuje reklamy.
+                        </td>
+                        <td>Cookies</td>
+                        <td>Cookies are files that reach the user's computer through Internet browsing. These files are
+                            used to identify the user through which the Internet assigns ads to us.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'four_one_one' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'zoznam_pouzitych_zdrojov' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

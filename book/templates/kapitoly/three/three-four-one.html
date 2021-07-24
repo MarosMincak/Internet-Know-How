@@ -1,0 +1,79 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div class="row">
+                <div class="col-lg-6"><p>Phishing je typ kybernetického útoku, ktorý sa šíri zväčša pomocou e-mailu
+                    alebo správ na sociálnych
+                    sieťach. Tento typ správy priťahuje jednotlivcov k poskytovaniu osobných alebo citlivých informácií,
+                    od hesiel, informácií o kreditných kartách a číslach sociálneho zabezpečenia až po podrobnosti o
+                    osobe alebo organizácii. <strong>Útočníci vystupujú ako legitímni zástupcovia (napr. Apple alebo
+                        Facebook)</strong> na získanie týchto informácií, ktoré sa potom používajú na prístup k účtom
+                    alebo systémom, čo často
+                    vedie ku krádeži identity alebo významným finančným stratám.</p></div>
+                <div class="col-lg-6">
+                    <div style="text-align: center;">
+                        <img style="width: 100%" src="{% static 'img/phishing.png' %}" alt="Phishing">
+                    </div>
+                </div>
+            </div>
+
+
+            <h3>Typy Phishingu</h3>
+
+            <ul class="tipy">
+                <li><strong>Angler Phishing</strong> (rybár): Tento kybernetický útok prichádza prostredníctvom
+                    sociálnych médií. Môže ísť o falošné adresy URL, okamžité správy alebo profily používané na získanie
+                    citlivých údajov. Útočníci tiež prehliadajú sociálne profily, aby zhromaždili všetky osobné
+                    informácie, ktoré môžu použiť v sociálnom inžinierstve. Prečítajte si viac o phishingových útokoch a
+                    o tom, ako identifikovať falošné adresy URL a e-mailové adresy.
+                </li>
+                <li><strong>Clone phishing</strong>: Jedná sa o „klonovanie“ phishingovej správy. Spočíva v presnej
+                    duplikácii e-mailu, aby vyzeral čo naj legitímnejšie (napr. od odosielateľa Microsoftu)
+                </li>
+                <li><strong>Domain Spoofing</strong>: útočník falšuje doménu spoločnosti, vďaka čomu sa e-mail javí ako
+                    pochádzajúci od tejto spoločnosti.
+                </li>
+                <li><strong>E-mail phishing</strong>: Útočníci pošlú nelegitímny e-mail so žiadosťou o osobné informácie
+                    alebo prihlasovacie údaje.
+                </li>
+                <li><strong>Search Engine Phishing</strong> (prehliadačový phishnig): Namiesto odosielania
+                    korešpondencie s cieľom získať informácie, tento typ phishingu zahŕňa vytvorenie webových stránok,
+                    ktoré napodobňujú legitímne stránky (napr. domovská stránka Facebooku). Je to jeden z
+                    najjednoduchších spôsobov ako získať od používateľa prihlasovacie údaje.
+                </li>
+                <li><strong>Smishing</strong>: jedná sa o rozosielanie správ prostredníctvom SMS. Útočníci odosielajú
+                    podvodné textové správy v snahe zhromaždiť informácie, ako sú čísla kreditných kariet alebo heslá.
+                </li>
+                <li><strong>Spear phishing</strong>: Spear phishing je obzvlášť zameraný, pretože útočníci si vyžadujú
+                    čas na zhromaždenie podrobností, ktoré môžu použiť na to, aby sa predstavili ako dôveryhodné entity.
+                    Potom zostavia prispôsobené phishingové e-maily vrátane podrobností, vďaka ktorým sa zdá, akoby
+                    e-mail pochádzal z priateľského zdroja.
+                </li>
+                <li><strong>Whaling</strong>: sa zameriava na „veľké ryby“ - zamestnancov rôznych spoločností na vysokej
+                    alebo vplyvnej pozícii. Útok tohto druhu je zámerný a často zahŕňa sofistikovanejšiu (premyslenú)
+                    taktiku sociálneho inžinierstva.
+                </li>
+                <li><strong>Vishing</strong>: Tento typ phishingu sa uskutočňuje pomocou telefonických hovory od
+                    podvodnej osoby, ktoré sa pokúšajú získať citlivé informácie. Táto forma phishingu je jednou z
+                    najbežnejších a je smerovaná najmä na dôchodcov. Podvodná osoba sa často vydáva za rodinného známeho
+                    so zámerom získať finančnú hotovosť na „pomoc v núdzi“.
+                </li>
+            </ul>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four' %}"
+                   role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four_two' %}"
+                   role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
