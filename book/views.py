@@ -39,13 +39,13 @@ def two_one(request):
 def two_two(request):
     return render(request, 'kapitoly/two/two-two.html', context={
         'text_previous': '< 2.1 Kybernetická bezpečnosť',
-        'text_next': '3 Hrozby internetu >',
+        'text_next': 'Opakovanie 1 >',
         'title': '2.2 Kybernetické útoky'})
 
 
 def three(request):
     return render(request, 'kapitoly/three/three.html', context={
-        'text_previous': '< 2.2 Kybernetické útoky',
+        'text_previous': '< Opakovanie 1',
         'text_next': '3.1 Bezpečné používanie internetu >',
         'title': '3 Hrozby internetu'})
 
@@ -161,13 +161,13 @@ def three_four_two(request):
 def three_four_three(request):
     return render(request, 'kapitoly/three/thre-four-thre.html', context={
         'text_previous': '< 3.4.2 Ako sa brániť proti Spamu a Phishingu',
-        'text_next': '4 Netiketa >',
+        'text_next': 'Opakovanie 2 >',
         'title': '3.4.3 Sociálne inžinierstvo'})
 
 
 def four(request):
     return render(request, 'kapitoly/four/four.html', context={
-        'text_previous': '< 3.4.3 Sociálne inžinierstvo',
+        'text_previous': '< Opakovanie 2',
         'text_next': '4.1 Kyberšikana >',
         'title': '4 Netiketa'})
 
@@ -182,13 +182,13 @@ def four_one(request):
 def four_one_one(request):
     return render(request, 'kapitoly/four/four-one-one.html', context={
         'text_previous': '< 4.1 Kyberšikana',
-        'text_next': '5. Dvojjazyčný výkladový slovník použitých pojmov >',
+        'text_next': 'Opakovanie 3 >',
         'title': '4.1.1 Ako sa kyberšikane vyvarovať a brániť'})
 
 
 def five(request):
     return render(request, 'kapitoly/five/five.html', context={
-        'text_previous': '< 4.1.1 Ako sa kyberšikane vyvarovať a brániť',
+        'text_previous': '< Opakovanie 3',
         'text_next': 'Zoznam použitých zdrojov >',
         'title': '5. Dvojjazyčný výkladový slovník použitých pojmov'})
 
@@ -197,3 +197,21 @@ def zoznam_pouzitych_zdrojov(request):
     return render(request, 'book/zoz-pouz-zdroj.html', context={
         'text_previous': '< 5. Dvojjazyčný výkladový slovník použitých pojmov',
         'title': 'Zoznam použitých zdrojov'})
+
+def test1(request):
+    return render(request, 'testy/test1-kap-2.html', context={
+        'text_previous': '< 2.2 Kybernetické útoky',
+        'text_next': '3. Hrozby internetu >',
+        'title': 'Opakovanie 1'})
+
+def test2(request):
+    return render(request, 'testy/test2-kap-3.html', context={
+        'text_previous': '< 3.4.3 Sociálne inžinierstvo',
+        'text_next': '4 Netiketa >',
+        'title': 'Opakovanie 2'})
+
+def test3(request):
+    return render(request, 'testy/test3-kap-4.html', context={
+        'text_previous': '< 4.1.1 Ako sa kyberšikane vyvarovať a brániť',
+        'text_next': '5. Dvojjazyčný výkladový slovník použitých pojmov >',
+        'title': 'Opakovanie 3'})

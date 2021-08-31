@@ -29,4 +29,7 @@ urlpatterns = [
     path('ako-sa-kybersikane-vyvarovat-a-branit', views.four_one_one, name='four_one_one'),
     path('dvojjazycny-vykladovy-slovnik-pouzitych-pojmov', views.five, name='five'),
     path('zoznam-pouzitych-zdrojov', views.zoznam_pouzitych_zdrojov, name='zoznam_pouzitych_zdrojov'),
+    path('test1', views.test1, name='test1'),
+    path('test2', views.test2, name='test2'),
+    path('test3', views.test3, name='test3'),
 ]

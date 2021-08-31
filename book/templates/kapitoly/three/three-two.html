@@ -48,9 +48,17 @@
                 <img style="width: 100%" src="{% static 'img/facebookSukromie_censored.jpg' %}" alt="FaceBook sukromie">
             </div>
 
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/2dAgcXkb8QE" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+
             <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
-                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one_three' %}" role="button">{{ text_previous }}</a>
-                <a class="btn btn-primary m-1 rounded" href="{% url 'three_two_one' %}" role="button">{{ text_next }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_one_three' %}"
+                   role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_two_one' %}"
+                   role="button">{{ text_next }}</a>
             </div>
         </div>
     </div>

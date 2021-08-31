@@ -39,9 +39,18 @@
             <div style="text-align: center;">
                 <img style="width: 60%" src="{% static 'img/system-failure.png' %}" alt="System failure">
             </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/sTo7Y4zWkn4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+
             <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
-                <a class="btn btn-primary m-1 rounded" href="{% url 'three_two_one' %}" role="button">{{ text_previous }}</a>
-                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_one' %}" role="button">{{ text_next }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_two_one' %}"
+                   role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_one' %}"
+                   role="button">{{ text_next }}</a>
             </div>
         </div>
     </div>

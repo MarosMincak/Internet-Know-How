@@ -1,0 +1,48 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div class="quiz">
+
+                <h2 class="quiz-question">1. Čo je to ARPANet?</h2>
+                <ul data-quiz-question="1">
+                    <li class="quiz-answer" data-quiz-answer="a">a. prvá online knižnica</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. systém používaný bežnými rodinami</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. prvá počítačová sieť</li>
+                </ul>
+
+                <h2 class="quiz-question">2. Čo je hlavným dôvodom digitalizácie ľudstva?</h2>
+                <ul data-quiz-question="2">
+                    <li class="quiz-answer" data-quiz-answer="a">a. uľahčovanie si života</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. internet zdarma</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. internet of things (IoT)</li>
+                </ul>
+
+                <h2 class="quiz-question">3. Čo môže byť najväčšou hrozbou pri používaní IoT?</h2>
+                <ul data-quiz-question="3">
+                    <li class="quiz-answer" data-quiz-answer="a">a. odosielanie citlivých dát iným spoločnostiam</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. spotrebiče sa môžu svojvoľne spúšťať</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. nedostatočná fyzická kontrola spotrebičov</li>
+                </ul>
+            </div>
+
+            <div class="quiz-result"></div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'two_two' %}" role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static "test_one.js" %}"></script>
+{% endblock %}

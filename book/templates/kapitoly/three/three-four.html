@@ -26,13 +26,22 @@
                 <p>Spam nie je skratkou pre počítačovú hrozbu, aj keď niektoré tak boli navrhnuté (ako nezmyselný a
                     nepríjemný malvér). Spam vo svojej podstate môže no nemusí byť nebezpečný. Môže obsahovať malvér
                     ktorý pohltí vašu emailovú schránku a začne rozposielať správy z vášho účtu ostatným používateľom.
-                    <strong>Dôležitým pravidlom pri spamoch je neklikať na žiadne odkazy a nesťahovať prílohy!!!</strong> Tie môžu
+                    <strong>Dôležitým pravidlom pri spamoch je neklikať na žiadne odkazy a nesťahovať
+                        prílohy!!!</strong> Tie môžu
                     potenciálne stiahnuť malvér a tým poškodiť váš počítač.</p>
             </div>
 
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/qmCJ1rdpSDw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+
             <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
-                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_four' %}" role="button">{{ text_previous }}</a>
-                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four_one' %}" role="button">{{ text_next }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_three_four' %}"
+                   role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four_one' %}"
+                   role="button">{{ text_next }}</a>
             </div>
         </div>
     </div>

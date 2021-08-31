@@ -1,0 +1,118 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div class="quiz">
+
+                <h2 class="quiz-question">1. Ktoré z týchto hesiel je najsilnejšie?</h2>
+                <ul data-quiz-question="1">
+                    <li class="quiz-answer" data-quiz-answer="a">a. AdamJablko</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. 12301287</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. r0dod3ndr0n</li>
+                    <li class="quiz-answer" data-quiz-answer="d">d. Sk4t3isL1fe</li>
+                </ul>
+
+                <h2 class="quiz-question">2. Čo znamená pojem: “Slabé heslo”?</h2>
+                <ul data-quiz-question="2">
+                    <li class="quiz-answer" data-quiz-answer="a">a. Heslo, ktoré je príliš krátke</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. Heslo, ktoré nespĺňa minimálne požiadavky stránky
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. Heslo, ktoré používa veľké množstvo ľudí</li>
+                </ul>
+
+                <h2 class="quiz-question">3. Čo sú to cookies?</h2>
+                <ul data-quiz-question="3">
+                    <li class="quiz-answer" data-quiz-answer="a">a. Sušienky za dobré správanie na internete</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. Typ vírusu</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. Malé súbory ktoré ukladajú nastavenia používateľa na
+                        danej stránke
+                    </li>
+                </ul>
+
+                <h2 class="quiz-question">4. Na čo slúži VPN?</h2>
+                <ul data-quiz-question="4">
+                    <li class="quiz-answer" data-quiz-answer="a">a. na zašifrovanie komunikácie cez internet</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. na bezpečné zaheslovanie účtov</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. na pripojenie viacerých zariadení do siete</li>
+                </ul>
+
+                <h2 class="quiz-question">5. Čo by sme na sociálne siete za žiadnych okolností nemali zverejňovať?</h2>
+                <ul data-quiz-question="5">
+                    <li class="quiz-answer" data-quiz-answer="a">a. meno, priezvisko, vek, adresa bydliska ...</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. fotografie</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. politické názory a debaty</li>
+                </ul>
+
+                <h2 class="quiz-question">6. Čo je to malvér?</h2>
+                <ul data-quiz-question="6">
+                    <li class="quiz-answer" data-quiz-answer="a">a. aplikácia na zvýšenie výkonu počítača</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. aplikácia na ukladanie hesiel</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. škodlivý typ kódu/softvéru</li>
+                </ul>
+
+                <h2 class="quiz-question">7. Čo robí Ransomvér?</h2>
+                <ul data-quiz-question="7">
+                    <li class="quiz-answer" data-quiz-answer="a">a. zašifruje a zablokuje prístup k súborom</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. zhromažduje vstupy na klávesnici a odosiela ich hekerovi (heslá...)</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. umožňuje vzdialený prístup k vášmu počítaču</li>
+                </ul>
+
+                <h2 class="quiz-question">8. Čo robí trójsky kôň?</h2>
+                <ul data-quiz-question="8">
+                    <li class="quiz-answer" data-quiz-answer="a">a. Nevyžadujú ľudskú pomoc na rozširovanie, odcudzujú súbory a spomaľujú PC</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. slúži na autoamtické vykonávanie operácií a umožňuje hekerovi vzdialene spracovať napadnuté počítače</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. maskuje sa ako legitímny softvér a po svojvoľnom spustení používateľom infikuje počítač rôznymi vírusmi
+                    </li>
+                </ul>
+
+                <h2 class="quiz-question">9. Čo je <strong>najdôležitejší</strong> prvok pri zabránení vírusu?</h2>
+                <ul data-quiz-question="9">
+                    <li class="quiz-answer" data-quiz-answer="a">a. nesťahovať obsah z internetu</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. spustenie antivírového programu</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. neklikať na webové odkazy</li>
+                    <li class="quiz-answer" data-quiz-answer="d">d. navštevovať potenciálne nebezpečné stránky</li>
+                </ul>
+
+                <h2 class="quiz-question">10. Čo je to spam?</h2>
+                <ul data-quiz-question="10">
+                    <li class="quiz-answer" data-quiz-answer="a">a. nevyžiadaný druh elektronickej pošty</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. typ počítačového vírusu</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. program na spomalenie počítača</li>
+                </ul>
+
+                <h2 class="quiz-question">11. Čo je to Phishing?</h2>
+                <ul data-quiz-question="11">
+                    <li class="quiz-answer" data-quiz-answer="a">a. typ počítačového vírusu</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. antivírový program</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. správa obsahujúca škodlivý obsah</li>
+                </ul>
+
+                <h2 class="quiz-question">12. Čo je to sociálne inžinierstvo?</h2>
+                <ul data-quiz-question="12">
+                    <li class="quiz-answer" data-quiz-answer="a">a. je schopnosť manipulovať s ľuďmi</li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. je spôsob zabezpečenia siete</li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. je určitý typ spamu</li>
+                </ul>
+            </div>
+
+            <div class="quiz-result"></div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'three_four_three' %}"
+                   role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'four' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static "test_two.js" %}"></script>
+{% endblock %}

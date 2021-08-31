@@ -1,0 +1,76 @@
+{% extends 'book/base.html' %}
+
+{% block content %}
+    <div id="content">
+        {% load static %}
+
+        {% include "book/content-header.html" %}
+
+        <div class="container">
+            <h2>{{ title }}</h2>
+
+            <div class="quiz">
+                <h2 class="quiz-question">1. Čo je to Netiketa?</h2>
+                <ul data-quiz-question="1">
+                    <li class="quiz-answer" data-quiz-answer="a">a. je súbor pravidiel ktoré definujú ako sa správať na
+                        internete
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. je spôsob prezentovania informácií na soc. siete
+                    </li>
+                </ul>
+
+                <h2 class="quiz-question">2. Čo je najzákladnajším pravidlom Netikety ?</h2>
+                <ul data-quiz-question="2">
+                    <li class="quiz-answer" data-quiz-answer="a">a. nezakladať si účty na sociálnych sieťach
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. nezverejňovať o sebe príliš veľa informácií
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. nepúšťať sa do zbytočných debát
+                    </li>
+                </ul>
+
+                <h2 class="quiz-question">3. Čo je kyberšikana?</h2>
+                <ul data-quiz-question="3">
+                    <li class="quiz-answer" data-quiz-answer="a">a. šikana vo verejnom priestranstve
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. obťažovanie inej osoby prostredníctvom internetu
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. počítačový vírus
+                    </li>
+                </ul>
+
+                <h2 class="quiz-question">4. Čo je najčastejší motív kyberšikany?</h2>
+                <ul data-quiz-question="4">
+                    <li class="quiz-answer" data-quiz-answer="a">a. vzhľad a správanie
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. za značkové veci
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. za finančnú situáciu v rodine
+                    </li>
+                </ul>
+
+                <h2 class="quiz-question">5. Aký je jeden z najefektívnejších spôsobov zabráneniu kyberšikane?</h2>
+                <ul data-quiz-question="5">
+                    <li class="quiz-answer" data-quiz-answer="a">a. reagovať na správy a brániť sa
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="b">b. nepoviem o tom nikomu a budem dúfať že prestane
+                    </li>
+                    <li class="quiz-answer" data-quiz-answer="c">c. ignorovať odosielateľa ale ukladať všetky správy/fotky/dôkazy
+                    </li>
+                </ul>
+            </div>
+
+            <div class="quiz-result"></div>
+
+            <div class="btn-group btn-group-sm d-flex justify-content-center" role="group">
+                <a class="btn btn-primary m-1 rounded" href="{% url 'four_one_one' %}"
+                   role="button">{{ text_previous }}</a>
+                <a class="btn btn-primary m-1 rounded" href="{% url 'five' %}" role="button">{{ text_next }}</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static "test_three.js" %}"></script>
+{% endblock %}
